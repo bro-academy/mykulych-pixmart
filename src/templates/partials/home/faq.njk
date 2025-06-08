@@ -1,0 +1,21 @@
+<div class="faq">
+
+    <div class="faq__heading">
+        <span class="faq__tag">{{ g_faq }}</span>
+        <h2 class="faq__title heading-h2">{{ g_answer }}</h2>
+        <button class="faq__button button button--secondary button--lg">{{ button_ask }}</button>
+    </div>
+
+    <div class="faq__accordion">
+
+        {% for item in faqItems %}
+        <details class="faq__item" {% if item.open %}open{% endif %}>
+            <summary class="faq__question">{{ item.question }}</summary>
+            <p class="faq__answer">{{ item.answer }}</p>
+        </details>
+        {% endfor %}
+
+    </div>
+
+
+</div>

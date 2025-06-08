@@ -1,0 +1,33 @@
+<article class="article">
+
+    {% for block in article.blocks %}
+        {% if block.type == "text" %}
+            <section class="article__section">
+                <p class="article__text">{{ block.text }}</p>
+            </section>
+
+        {% elif block.type == "heading-text" %}
+            <section class="article__section">
+                <h2 class="article__heading">{{ loop.index }}. {{ block.heading }}</h2>
+                <p class="article__text">{{ block.text }}</p>
+            </section>
+
+        {% elif block.type == "illustration" %}
+            <div class="article__illustration">
+                {% from 'src/templates/partials/ui/icon.njk' import picture %}
+                {{ picture("article__image", block.image.src, block.image.alt) }}
+                <div class="article__info">
+                    <p class="article__info-description">{{ block.image.description }}</p>
+                    <a href="{{ block.image.link.href }}" class="article__info-link link">{{ block.image.link.text }}</a>
+                </div>
+            </div>
+
+        {% elif block.type == "quote" %}
+            <blockquote class="quote">
+                <img class="quote__icon" src="{{ block.quote.icon }}" />
+                <p class="quote__text">{{ block.quote.text }}</p>
+            </blockquote>
+        {% endif %}
+    {% endfor %}
+
+</article>

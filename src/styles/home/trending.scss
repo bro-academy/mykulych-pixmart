@@ -1,0 +1,119 @@
+@use '../ui/brakepoints' as *;
+@use '../mixins' as *;
+
+.trending {
+    display: flex;
+    flex-direction: column;
+    gap: 48px;
+
+    &__header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    &__heading {
+        display: flex;
+        flex-direction: column;
+        gap: 16px;
+    }
+
+    &__tag {
+        @include text-p2-regular;
+
+        color: var(--marina-800);
+        text-transform: uppercase;
+    }
+
+    &__buttons {
+        display: flex;
+        gap: 12px;
+
+        @include hide-element;
+
+        @include md {
+            @include show-element;
+
+            position: static;
+        }
+    }
+}
+
+.product-slider {
+    display: flex;
+    gap: 16px;
+
+    @include hide-scrollbar;
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 16px;
+    flex-shrink: 0;
+    border-radius: 12px;
+    overflow: hidden;
+    min-width: 240px;
+    cursor: pointer;
+    position: relative;
+
+    &__illustration {
+        position: relative;
+        transition: var(--tran-duration);
+
+        &-img {
+            border-radius: 20px;
+        }
+    }
+
+    &:hover .card__illustration {
+        filter: brightness(0.6);
+    }
+
+    &__badge {
+        position: absolute;
+        top: 0;
+        right: 0;
+    }
+
+    &__hover-button {
+        position: absolute;
+        top: 29%;
+        left: 50%;
+        opacity: 0;
+        transform: translateX(-50%) translateZ(0);
+        pointer-events: none;
+        transition: var(--tran-duration);
+    }
+
+    &:hover .card__hover-button {
+        opacity: 1;
+        pointer-events: auto;
+    }
+
+    &__content {
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+        align-items: center;
+    }
+
+    &__text {
+        display: flex;
+        flex-direction: column;
+        gap: 4px;
+
+        &-meta {
+            @include text-p2-regular;
+
+            color: var(--color-secondary2);
+        }
+    }
+
+    &__price {
+        @include text-p2-medium;
+
+        color: var(--marina-800);
+    }
+}

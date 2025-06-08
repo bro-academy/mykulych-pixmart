@@ -1,0 +1,44 @@
+<div class="contact__info">
+
+    <div class="contact__texts">
+        <p class="contact__texts-tag">{{ g_contact }}</p>
+        <h1 class="contact__texts-title">{{ get_in_touch }}<br>{{ with_us }} </h1>
+        <p class="contact__texts-description">
+            {{ contact_description }}
+        </p>
+    </div>
+
+    <a href="#" class="contact__button button button--primary button--lg">{{ button_shop }}</a>
+
+    {% from 'src/templates/partials/ui/icon.njk' import icon %}
+    <div class="contact__details">
+
+        <div class="contact__detail">
+            {{ icon("icon-phone", "icon--blue contact__detail-icon") }}
+            <span class="contact__detail-text">{{ g_phone }}</span>
+        </div>
+        <div class="contact__detail">
+            {{ icon("icon-mail", "icon--blue contact__detail-icon") }}
+            <span class="contact__detail-text">{{ g_mail }}</span>
+        </div>
+        <div class="contact__detail">
+            {{ icon("icon-clock", "icon--blue contact__detail-icon") }}
+            <span class="contact__detail-text">{{ g_duration }}</span>
+        </div>
+
+    </div>
+
+    <div class="contact__adress">
+
+        <iframe class="contact__map" src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d63114.272661448726!2d-73.69648538904627!3d40.859433619083184!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c28626961c36f7%3A0x19fe673390d12325!2sRoslyn%2C%20NY!5e0!3m2!1sen!2sus!4v1748964495580!5m2!1sen!2sus"></iframe>
+        <div class="contact__pin">
+            {{ icon("icon-marker-pin", "icon--blue") }}
+            <div class="contact__pin-wrapper">
+                <h4 class="contact__pin-name">{{ contact_name }}</h4>
+                <p class="contact__pin-adress">{{ contact_adress }}</p>
+            </div>
+        </div>
+
+    </div>
+
+</div>

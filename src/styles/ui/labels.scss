@@ -1,0 +1,33 @@
+@use '../mixins' as *;
+@use 'variables' as *;
+
+.labels {
+    height: 100px;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    margin-bottom: 32px;
+}
+
+.label {
+    @include text-p2-medium;
+
+    padding: 8px 16px;
+    color: var(--fixed-primary-white);
+    border-radius: 100px;
+    text-transform: uppercase;
+
+    &--new {
+        background-color: var(--emerald-800);
+    }
+
+    &--popular {
+        background-color: var(--marina-800);
+    }
+
+    &--soldout {
+        background-color: var(--bg-base);
+        color: var(--fixed-secondary2);
+    }
+
+}

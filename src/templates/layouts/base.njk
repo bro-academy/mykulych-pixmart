@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>{{ common.siteTitle }} </title>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link
+            rel="preconnect"
+            href="https://fonts.gstatic.com"
+            crossorigin
+        >
+        <link href="https://fonts.googleapis.com/css2?family=Libre+Franklin:wght@100..900&family=Plus+Jakarta+Sans:wght@200..800&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="/src/styles/style.scss">
+    </head>
+    <body>
+        <div class="main-layout">
+            {% include "src/templates/partials/common/header.njk" %}
+            <main class="main">
+                {% block content %}  default content  {% endblock %}
+            </main>
+            {% include "src/templates/partials/common/footer.njk" %}
+        </div>
+
+        {# Script for Mobile Burger #}
+        <script>
+            const burger = document.querySelector('.burger');
+            const nav = document.querySelector('.header__nav');
+            const body = document.querySelector('body')
+
+            burger.addEventListener('click', () => {
+                burger.classList.toggle('active');
+                nav.classList.toggle('active');
+                body.classList.toggle('overflow-hidden');
+            });
+        </script>
+
+        {# Script for Catalog Filter #}
+        <script>
+            document.addEventListener("DOMContentLoaded", function () {
+            const filterToggleButton = document.querySelector(".catalog__header-toggle");
+            const filterOpener = document.querySelector(".filter-opener");
+            const filterCloseButton = document.querySelector(".filter-opener_button");
+            const body = document.querySelector('body')
+
+            filterToggleButton.addEventListener("click", function () {
+                filterOpener.classList.add("active");
+                body.classList.add('overflow-hidden');
+            });
+
+            filterCloseButton.addEventListener("click", function () {
+                filterOpener.classList.remove("active");
+                                body.classList.remove('overflow-hidden');
+            });
+            });
+        </script>
+
+        {# Script for Input Range #}
+        <script>
+            const minRange = document.getElementById('min');
+            const maxRange = document.getElementById('max');
+            const minValue = document.getElementById('min-value');
+            const maxValue = document.getElementById('max-value');
+            const range = document.querySelector('.range-slider__range');
+
+            function updateValues() {
+            let min = parseInt(minRange.value);
+            let max = parseInt(maxRange.value);
+
+            if (min > max) {
+                [min, max] = [max, min]; // swap
+            }
+
+            minValue.textContent = `€${min}`;
+            maxValue.textContent = `€${max}`;
+
+            const minPercent = ((min - 5) / (50 - 5)) * 100;
+            const maxPercent = ((max - 5) / (50 - 5)) * 100;
+
+            range.style.left = `${minPercent}%`;
+            range.style.width = `${maxPercent - minPercent}%`;
+            }
+
+            minRange.addEventListener('input', updateValues);
+            maxRange.addEventListener('input', updateValues);
+
+            updateValues();
+        </script>
+
+        {# Script for form-fields error #}
+        <script>
+            const form = document.querySelector('.form');
+            const fields = form.querySelectorAll('.form-field');
+
+            form.addEventListener('submit', function (e) {
+            e.preventDefault();
+
+            fields.forEach(field => {
+            const errorContainer = field.parentElement.querySelector('.form__error-message');
+            const value = field.value.trim();
+
+            // Проверка для обычных input, textarea
+            let isValid = field.checkValidity() && value !== '';
+
+            // Отдельная проверка для select
+            if (field.tagName.toLowerCase() === 'select') {
+            isValid = field.checkValidity() && field.value !== '';
+            }
+
+            if (!isValid) {
+            field.classList.remove('success');
+            field.classList.add('error');
+            errorContainer.classList.remove('success');
+            errorContainer.classList.add('error');
+            errorContainer.textContent = 'This field is required.';
+            } else {
+            field.classList.remove('error');
+            field.classList.add('success');
+            errorContainer.classList.remove('error');
+            errorContainer.classList.add('success');
+            errorContainer.textContent = 'Field validation is successful.';
+            }
+            });
+            });
+
+        </script>
+
+    </body>
+</html>

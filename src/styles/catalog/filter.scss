@@ -1,0 +1,38 @@
+@use '../mixins' as *;
+@use '../ui/brakepoints' as *;
+
+.filter {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    background-color: var(--bg-base);
+    padding: 40px 16px 0;
+
+    // min width for desktop aside filter
+    min-width: 218px;
+
+    &__section {
+        display: flex;
+        flex-direction: column;
+        gap: 24px;
+    }
+
+    &__title {
+        @include heading-h4;
+    }
+
+    &__list {
+        display: flex;
+        flex-direction: column;
+        gap: 12px;
+
+        &-option {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            cursor: pointer;
+
+            @include text-p2-regular;
+        }
+    }
+}

@@ -1,0 +1,63 @@
+@use 'ui/brakepoints' as *;
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: var(--font-primary);
+    background-color: var(--bg-base);
+    color: var(--color-primary); /* Safari */ /* Firefox */
+    user-select: none; /* Internet Explorer/Edge */
+
+    &.overflow-hidden {
+        overflow: hidden;
+    }
+}
+
+// layouts
+.main-layout {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+//  layouts-end
+.main {
+    display: flex;
+    flex-direction: column;
+    gap: 64px;
+
+    @include lg {
+        gap: 120px;
+    }
+}
+
+.icon {
+    width: 24px;
+    height: 24px;
+
+    &--blue {
+        color: var(--marina-800);
+    }
+
+    &--white {
+        color: var(--color-primary-invert);
+    }
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+    font-weight: 700;
+}
+
+a {
+    text-decoration: none;
+}
+
+ul {
+    list-style: none;
+}

@@ -1,0 +1,133 @@
+@use '../ui/brakepoints' as *;
+@use '../mixins' as *;
+
+.categories {
+    --column-width: calc(50% - (var(--column-gap) / 2));
+    --column-gap: 20px;
+
+    display: flex;
+    flex-direction: column;
+    gap: 64px;
+
+    @include md {
+        flex-direction: row-reverse;
+    }
+
+    &__content {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        gap: 32px;
+
+        &-wrapper {
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
+        }
+    }
+
+    &__tag {
+        @include text-p2-regular;
+
+        color: var(--marina-800);
+        text-transform: uppercase;
+    }
+
+    &__heading {
+        @include heading-h2;
+    }
+
+    &__text {
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
+
+        &-title {
+            @include heading-h3;
+        }
+
+        &-desc {
+            @include text-p1-regular;
+
+            color: var(--color-secondary2);
+        }
+    }
+
+    &__button {
+        max-width: 151px;
+    }
+
+    &__cards {
+        position: relative;
+        display: flex;
+        overflow: hidden;
+        min-height: 460px;
+        width: 100%;
+    }
+
+    &__cards-wrapper {
+        width: var(--column-width);
+        display: flex;
+        flex-direction: column;
+        gap: var(--column-gap);
+        position: absolute;
+        left: 0;
+        transform: translateY(-50%);
+
+        &--left {
+            animation: float-left 59s infinite;
+        }
+
+        &--right {
+            left: calc(var(--column-width) + var(--column-gap));
+            animation: float-right 59s infinite;
+        }
+    }
+
+    &__card {
+        width: 100%;
+        background-color: var(--bg-alternative2);
+        padding: 24px;
+        border-radius: 20px;
+        display: flex;
+        flex-direction: column;
+        gap: 16px;
+
+        &--active {
+            background-color: var(--marina-800);
+            color: var(--color-primary-invert);
+
+            .categories__text-desc {
+                color: var(--color-primary-invert);
+            }
+        }
+    }
+}
+
+@keyframes float-left {
+    0% {
+        transform: translateY(0);
+    }
+
+    66% {
+        transform: translateY(-50%);
+    }
+
+    100% {
+        transform: translateY(0%);
+    }
+}
+
+@keyframes float-right {
+    0% {
+        transform: translateY(-50%);
+    }
+
+    50% {
+        transform: translateY(0);
+    }
+
+    100% {
+        transform: translateY(-50%);
+    }
+}

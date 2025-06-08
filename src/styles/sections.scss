@@ -1,0 +1,64 @@
+@use 'ui/brakepoints' as *;
+@use 'mixins' as *;
+
+.section {
+    &--main-banner {
+        background: linear-gradient(
+            90deg,
+            rgb(240 246 253 / 1) 44%,
+            rgb(255 255 255 / 1) 100%
+        );
+    }
+
+    &--faq {
+        position: relative;
+        margin: 0 auto;
+        width: 100%;
+        max-width: 1440px;
+
+        @include md {
+            &::before {
+                content: '';
+                position: absolute;
+                top: 32%;
+                right: 0;
+                width: 689px;
+                height: 498px;
+                background-color: rgb(15 115 246 / 0.1);
+                filter: blur(200px);
+                z-index: -1;
+
+                @include lg {
+                    right: 30%;
+                }
+            }
+        }
+    }
+
+    &--contact {
+        background: linear-gradient(
+            180deg,
+            rgb(240 246 253 / 1) 44%,
+            rgb(255 255 255 / 1) 100%
+        );
+    }
+
+    &--related-articles {
+        background-color: rgb(240 246 253 / 1);
+    }
+
+    &__content {
+        margin: 0 auto;
+        width: 100%;
+        max-width: 1440px;
+        padding-inline: 16px;
+
+        @include md {
+            padding-inline: 40px;
+        }
+
+        @include lg {
+            padding-inline: 80px;
+        }
+    }
+}

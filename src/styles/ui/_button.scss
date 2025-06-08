@@ -1,0 +1,133 @@
+@use "variables" as *;
+
+// Удалю после проверки ------
+.buttons {
+    margin-bottom: 32px;
+    margin-left: 32px;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+// ------------------------
+
+.button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    border-radius: 8px;
+    font-family: var(--font-secondary);
+    font-weight: 600;
+    border: 2px solid transparent;
+    background: transparent;
+    cursor: pointer;
+    white-space: nowrap;
+    color: var(--color-primary);
+    transition-duration: 0.3s;
+    outline-offset: -1px;
+    box-sizing: border-box;
+
+
+    &--primary {
+        border-color: var(--marina-800);
+        background-color: var(--marina-800);
+        color: var(--fixed-primary-white);
+
+        &:hover {
+            border-color: var(--marina-600);
+            background-color: var(--marina-600);
+        }
+
+        &:focus {
+            border-color: var(--marina-600);
+            background-color: var(--marina-800);
+            outline: 2px solid var(--marina-600);
+            transition: none;
+        }
+
+        &:active {
+            outline: 0 none;
+            background-color: var(--marina-900);
+            border-color: var(--marina-900);
+        }
+    }
+
+    &--secondary {
+        border-color: var(--seporator-bold);
+
+        &:hover {
+            background-color: var(--seporator);
+            border-color: var(--seporator);
+        }
+
+        &:focus {
+            border-color: var(--marina-600);
+            background-color: var(--seporator);
+            outline: 2px solid var(--marina-600);
+            transition: none;
+        }
+
+        &:active {
+            outline: 0 none;
+            background-color: var(--seporator);
+            border-color: var(--seporator);
+        }
+    }
+
+    &--tertiary {
+        border: 1px solid transparent;
+
+        &:hover {
+            border-color: var(--marina-600);
+        }
+
+        &:focus {
+            border-color: var(--marina-600);
+            outline: 3px solid var(--marina-600);
+            transition: none;
+        }
+
+        &:active {
+            border-color: transparent;
+            background-color: var(--seporator);
+            outline: 0 none;
+        }
+    }
+
+    &--lg {
+        min-height: 64px;
+        padding: 18px 32px;
+        font-size: 18px;
+        line-height: 1;
+    }
+
+    &--md {
+        min-height: 40px;
+        padding: 6px 20px;
+        font-size: 16px;
+        line-height: 1;
+    }
+
+    &--sm {
+        min-height: 32px;
+        padding: 2px 12px;
+        font-size: 16px;
+        line-height: 1;
+    }
+
+    &--icon-lg {
+        padding: 18px;
+        min-height: 64px;
+    }
+
+    &--icon-md {
+        padding: 6px;
+        min-height: 40px;
+    }
+
+    &--icon-sm {
+        padding: 9px;
+        min-height: 32px;
+    }
+}

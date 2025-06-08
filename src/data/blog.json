@@ -1,0 +1,78 @@
+{
+    "article": {
+        "blocks": [
+            {
+                "type": "text",
+                "text": "In the vast expanse of graphic design, typography stands as a pivotal element that can make or break the visual appeal of any project. Understanding the art of typography is essential for creating designs that not only attract attention but also communicate effectively. Here, we delve into practical tips that will help you master typography, transforming your creations into eye-catching masterpieces."
+            },
+            {
+                "type": "heading-text",
+                "heading": "Understand Typeface Selection",
+                "text": "The choice of typeface is foundational in setting the tone of your design. Serif fonts, with their classic appeal, lend a touch of elegance and formality, making them ideal for print media and official documents. Sans-serif fonts, on the other hand, project a modern and clean look, perfect for digital platforms. When selecting a typeface, consider the message you wish to convey and the medium through which it will be communicated."
+            },
+            {
+                "type": "illustration",
+                "image": {
+                    "src": "fonts-desk",
+                    "alt": "Desk with many fonts",
+                    "description": "Example of font usage in typography.",
+                    "link": {
+                        "href": "#",
+                        "text": "Get this asset"
+                    }
+                }
+            },
+            {
+                "type": "heading-text",
+                "heading": "Understand Typeface Selection",
+                "text": "The choice of typeface is foundational in setting the tone of your design. Serif fonts, with their classic appeal, lend a touch of elegance and formality, making them ideal for print media and official documents. Sans-serif fonts, on the other hand, project a modern and clean look, perfect for digital platforms. When selecting a typeface, consider the message you wish to convey and the medium through which it will be communicated."
+            },
+            {
+                "type": "heading-text",
+                "heading": "Understand Typeface Selection",
+                "text": "The choice of typeface is foundational in setting the tone of your design. Serif fonts, with their classic appeal, lend a touch of elegance and formality, making them ideal for print media and official documents. Sans-serif fonts, on the other hand, project a modern and clean look, perfect for digital platforms. When selecting a typeface, consider the message you wish to convey and the medium through which it will be communicated."
+            },
+            {
+                "type": "heading-text",
+                "heading": "Understand Typeface Selection",
+                "text": "The choice of typeface is foundational in setting the tone of your design. Serif fonts, with their classic appeal, lend a touch of elegance and formality, making them ideal for print media and official documents. Sans-serif fonts, on the other hand, project a modern and clean look, perfect for digital platforms. When selecting a typeface, consider the message you wish to convey and the medium through which it will be communicated."
+            },
+            {
+                "type": "quote",
+                "quote": {
+                    "icon": "/src/assets/images/quote.svg",
+                    "text": "Typography is not just the art of arranging type but the craft of breathing life into characters, turning words into stories that captivate the soul."
+                }
+            },
+            {
+                "type": "text",
+                "text": "Typography is an art that speaks volumes beyond the mere letters on a surface. By applying these tips, designers can elevate their work from mere messages to powerful visual statements. Remember, mastering typography is a journey of continuous learning and experimentation. Embrace the process, and let your designs speak louder than words. Happy designing!"
+            }
+        ]
+    },
+
+    "articles": [
+        {
+            "image": "laurent",
+            "alt": "Best Dishes",
+            "title": "Best Dishes",
+            "date": "15 April 2024",
+            "tag": "Tag"
+        },
+        {
+            "image": "laurent",
+            "alt": "Contact Us Lotus Spa",
+            "title": "Contact Us Lotus Spa",
+            "date": "5 May 2024",
+            "tag": "Tag"
+        },
+        {
+            "image": "laurent",
+            "alt": "Creative Blog",
+            "title": "Creative Blog",
+            "date": "20 June 2024",
+            "tag": "Tag",
+            "big": true
+        }
+    ]
+}

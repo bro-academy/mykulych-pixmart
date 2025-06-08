@@ -1,0 +1,8 @@
+{% macro productCard(image, alt, text) %}
+<div class="products__card">
+    <div class="products__illustration" aria-label="{{ alt }}">
+        {% include image %}
+    </div>
+    <p class="products__text">{{ text }}</p>
+</div>
+{% endmacro %}

@@ -1,0 +1,70 @@
+@use '../mixins' as *;
+@use '../ui/brakepoints' as *;
+
+.article {
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+    width: 100%;
+    padding: 40px 0 68px;
+
+    @include md {
+        padding: 48px 0 120px;
+    }
+
+    &__section {
+        display: flex;
+        flex-direction: column;
+        gap: 16px;
+    }
+
+    &__heading {
+        @include heading-h4;
+    }
+
+    &__text {
+        @include text-p1-regular;
+
+        color: var(--color-secondary);
+    }
+
+    &__illustration {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    &__image {
+        width: 100%;
+        border-radius: 12px;
+        object-fit: cover;
+    }
+
+    &__info {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        &-description {
+            @include text-p2-regular;
+
+            color: var(--color-secondary);
+        }
+
+        &-link {
+            @include link-l2;
+
+            color: var(--accent-link);
+        }
+    }
+}
+
+.quote {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+
+    &__text {
+        @include heading-h4;
+    }
+}

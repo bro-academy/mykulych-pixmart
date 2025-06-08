@@ -1,0 +1,172 @@
+<filter class="filter">
+
+    <div class="filter__section">
+        <h3 class="filter__title">Categories</h3>
+
+        <ul class="filter__list">
+            <li class="filter__list-item">
+                <label class="filter__list-option">
+                    <input type="checkbox" class="default-checkbox">
+                    <span class="custom-checkbox"></span>
+                    All Categories
+                </label>
+            </li>
+            <li class="filter__list-item">
+                <label class="filter__list-option">
+                    <input type="checkbox" class="default-checkbox">
+                    <span class="custom-checkbox"></span>
+                    Technology
+                </label>
+            </li>
+            <li class="filter__list-item">
+                <label class="filter__list-option">
+                    <input type="checkbox" class="default-checkbox">
+                    <span class="custom-checkbox"></span>
+                    Travel & Tourism
+                </label>
+            </li>
+            <li class="filter__list-item">
+                <label class="filter__list-option">
+                    <input type="checkbox" class="default-checkbox">
+                    <span class="custom-checkbox"></span>
+                    Health & Fitness
+                </label>
+            </li>
+            <li class="filter__list-item">
+                <label class="filter__list-option">
+                    <input type="checkbox" class="default-checkbox">
+                    <span class="custom-checkbox"></span>
+                    E-Commerce
+                </label>
+            </li>
+            <li class="filter__list-item">
+                <label class="filter__list-option">
+                    <input type="checkbox" class="default-checkbox">
+                    <span class="custom-checkbox"></span>
+                    Education
+                </label>
+            </li>
+            <li class="filter__list-item">
+                <label class="filter__list-option">
+                    <input type="checkbox" class="default-checkbox">
+                    <span class="custom-checkbox"></span>
+                    Entertainment
+                </label>
+            </li>
+            <li class="filter__list-item">
+                <label class="filter__list-option">
+                    <input type="checkbox" class="default-checkbox">
+                    <span class="custom-checkbox"></span>
+                    Others
+                </label>
+            </li>
+        </ul>
+    </div>
+
+    <div class="filter__section">
+        <h3 class="filter__title">Format Type</h3>
+
+        <ul class="filter__list">
+            <li class="filter__list-item">
+                <label class="filter__list-option">
+                    <input type="radio" class="default-radio" name="gender">
+                    <span class="custom-radio"></span>
+                    Figma
+                </label>
+            </li>
+            <li class="filter__list-item">
+                <label class="filter__list-option">
+                    <input type="radio" class="default-radio" name="gender">
+                    <span class="custom-radio"></span>
+                    Sketch
+                </label>
+            </li>
+            <li class="filter__list-item">
+                <label class="filter__list-option">
+                    <input type="radio" class="default-radio" name="gender">
+                    <span class="custom-radio"></span>
+                    Adobe XD
+                </label>
+            </li>
+            <li class="filter__list-item">
+                <label class="filter__list-option">
+                    <input type="radio" class="default-radio" name="gender">
+                    <span class="custom-radio"></span>
+                    Adobe Photoshop
+                </label>
+            </li>
+            <li class="filter__list-item">
+                <label class="filter__list-option">
+                    <input type="radio" class="default-radio" name="gender">
+                    <span class="custom-radio"></span>
+                    Adobe Illustration
+                </label>
+            </li>
+        </ul>
+
+    </div>
+
+    <div class="filter__section">
+        <h3 class="filter__title">Style</h3>
+
+        <ul class="filter__list">
+            <li class="filter__list-item">
+                <label class="filter__list-option">
+                    <input class="switcher" type="checkbox">
+                    Minimalist
+                </label>
+            </li>
+            <li class="filter__list-item">
+                <label class="filter__list-option">
+                    <input class="switcher" type="checkbox">
+                    Modern
+                </label>
+            </li>
+            <li class="filter__list-item">
+                <label class="filter__list-option">
+                    <input class="switcher" type="checkbox">
+                    Playful
+                </label>
+            </li>
+            <li class="filter__list-item">
+                <label class="filter__list-option">
+                    <input class="switcher" type="checkbox">
+                    Dark Mode
+                </label>
+            </li>
+            <li class="filter__list-item">
+                <label class="filter__list-option">
+                    <input class="switcher" type="checkbox">
+                    Photocentric
+                </label>
+            </li>
+        </ul>
+
+    </div>
+
+    <div class="filter__section">
+        <h3 class="filter__title">Price</h3>
+
+        <div class="filter__list">
+
+            <div class="range-slider">
+                <div class="range-slider__track"></div>
+                <div class="range-slider__range"></div>
+                <input type="range" min="5" max="50" value="10" id="min">
+                <input type="range" min="5" max="50" value="40" id="max">
+            </div>
+            <div class="range-values">
+                <span class="range-values-price" id="min-value">€10</span>
+                <span class="range-values-price" id="max-value">€40</span>
+            </div>
+
+        </div>
+    </div>
+
+    <button class="filter__button button button--secondary button--md">
+        {% from 'src/templates/partials/ui/icon.njk' import icon %}
+        {{ icon("icon-x-close") }}
+        {{ g_clear_filters }}
+    </button>
+
+</filter>

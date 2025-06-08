@@ -1,0 +1,30 @@
+@use '../mixins' as *;
+@use '../ui/brakepoints' as *;
+
+.catalog-banner {
+    position: relative;
+    overflow: hidden;
+    padding: 100px 20px;
+
+    &::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: url('/src/assets/images/rectangle.png');
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: auto;
+        z-index: -1;
+    }
+
+    @include md {
+        padding: 64px 80px 100px;
+    }
+
+    &__title {
+        @include heading-h1;
+    }
+}

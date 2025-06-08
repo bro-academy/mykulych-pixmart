@@ -1,0 +1,141 @@
+@use '/src/styles/mixins';
+
+:root {
+    --font-primary: 'Plus Jakarta Sans', 'Arial', 'Helvetica', sans-serif;
+    --font-secondary: 'Libre Franklin', 'Impact', 'Arial Black', sans-serif;
+
+    // Static Palette / Marina
+    --marina-1200: rgb(0 39 84 / 1);
+    --marina-1100: rgb(0 53 113 / 1);
+    --marina-1000: rgb(0 68 145 / 1);
+    --marina-900: rgb(0 84 182 / 1);
+    --marina-800: rgb(2 101 220 / 1);
+    --marina-700: rgb(20 122 243 / 1);
+    --marina-600: rgb(56 146 243 / 1);
+    --marina-500: rgb(89 167 246 / 1);
+    --marina-400: rgb(120 187 250 / 1);
+    --marina-300: rgb(150 206 253 / 1);
+    --marina-200: rgb(181 222 255 / 1);
+    --marina-100: rgb(202 232 255 / 1);
+    --marina-50: rgb(224 242 255 / 1);
+
+    // StaticPalette/Emerald
+    --emerald-800: #007772;
+
+    // Text-icon-elements
+    --color-primary: rgb(13 13 21 / 1);
+    --color-secondary: rgb(42 53 65 / 0.85);
+    --color-secondary2: rgb(42 53 65 / 0.7);
+    --color-baselcon: rgb(39 53 68 / 0.55);
+    --color-disabled: rgb(34 52 73 / 0.4);
+    --color-primary-invert: rgb(248 247 255 / 1);
+    --color-secondary-invert: rgb(239 245 250 / 0.82);
+    --color-secondary2-invert: rgb(231 238 247 / 0.66);
+    --color-baselcon-invert: rgb(231 241 253 / 0.49);
+    --color-disabled-invert: rgb(229 236 251 / 0.36);
+
+    // BG
+    --bg-base: rgb(255 255 255 / 1);
+    --bg-alternative: rgb(248 250 252 / 1);
+    --bg-alternative2: rgb(244 247 250 / 1);
+    --bg-baselcon: rgb(13 13 21 / 1);
+    --bg-alternative-invert: rgb(26 25 37 / 1);
+    --bg-alternative2-invert: rgb(29 28 40 / 1);
+
+    // Elements
+    --accent-link: rgb(2 101 220 / 1);
+    --line: rgb(31 50 71 / 0.27);
+    --seporator: rgb(41 77 117 / 0.09);
+    --seporator-bold: rgb(29 54 83 / 0.17);
+    --focus: rgb(56 146 243 / 1);
+    --accent-link-invert: rgb(120 187 250 / 1);
+    --line-invert: rgb(212 217 242 / 0.26);
+    --seporator-invert: rgb(191 197 238 / 0.12);
+    --seporator-bold-invert: rgb(208 215 251 / 0.17);
+    --focus-invert: rgb(150 206 253 / 1);
+
+    // Criticality Statuses
+    --status-neutral: rgb(137 144 153 / 1);
+    --status-negative: rgb(234 56 41 / 1);
+    --status-high: rgb(203 93 0 / 1);
+    --status-medium: rgb(248 217 4 / 1);
+    --status-info: rgb(157 87 244 / 1);
+    --status-positive: rgb(0 143 93 / 1);
+
+    // Surface (main and invert)
+    --surface-red: rgb(255 237 235 / 1);
+    --surface-orange: rgb(255 244 229 / 1);
+    --surface-yellow: rgb(255 247 214 / 1);
+    --surface-grass: rgb(220 244 230 / 1);
+    --surface-emerald: rgb(214 245 242 / 1);
+    --surface-marengo: rgb(213 245 249 / 1);
+    --surface-marina: rgb(224 242 255 / 1);
+    --surface-indigo: rgb(237 238 255 / 1);
+    --surface-purple: rgb(246 235 255 / 1);
+    --surface-violet: rgb(254 234 250 / 1);
+    --surface-magenta: rgb(255 234 241 / 1);
+    --surface-grey: rgb(244 247 250 / 1);
+    --surface-white: rgb(255 255 255 / 1);
+
+    /* invert */
+    --surface-red-invert: rgb(89 0 0 / 1);
+    --surface-orange-invert: rgb(73 25 1 / 1);
+    --surface-yellow-invert: rgb(54 37 0 / 1);
+    --surface-grass-invert: rgb(10 46 29 / 1);
+    --surface-emerald-invert: rgb(18 44 43 / 1);
+    --surface-marengo-invert: rgb(0 42 70 / 1);
+    --surface-marina-invert: rgb(0 39 84 / 1);
+    --surface-indigo-invert: rgb(27 30 100 / 1);
+    --surface-purple-invert: rgb(51 16 106 / 1);
+    --surface-violet-invert: rgb(71 14 70 / 1);
+    --surface-magenta-invert: rgb(84 3 42 / 1);
+    --surface-grey-invert: rgb(43 51 62 / 1);
+    --surface-white-invert: rgb(32 38 49 / 1);
+
+    // Fixed Neutral Color
+    --fixed-primary: rgb(13 13 21 / 1);
+    --fixed-secondary: rgb(42 53 65 / 0.85);
+    --fixed-secondary2: rgb(42 53 65 / 0.7);
+    --fixed-baselcon: rgb(39 53 68 / 0.55);
+    --fixed-disabled: rgb(34 52 73 / 0.4);
+    --fixed-line: rgb(31 50 71 / 0.27);
+    --fixed-seporatorBold: rgb(29 54 83 / 0.17);
+    --fixed-seporator: rgb(41 77 117 / 0.09);
+    --fixed-alternative: rgb(26 25 37 / 1);
+    --fixed-alternative2: rgb(29 28 40 / 1);
+    --fixed-base: rgb(13 13 21 / 1);
+    --fixed-primary-white: rgb(245 248 251 / 1);
+    --fixed-secondary-white: rgb(239 245 250 / 0.82);
+    --fixed-secondary2-white: rgb(231 238 247 / 0.66);
+    --fixed-disabled-white: rgb(229 236 251 / 0.36);
+    --fixed-line-white: rgb(212 217 242 / 0.26);
+    --fixed-baselcon-white: rgb(231 241 253 / 0.49);
+    --fixed-seporator-white: rgb(191 197 238 / 0.12);
+    --fixed-seporato-bold-white: rgb(208 215 251 / 0.17);
+    --fixed-alternative-white: rgb(248 250 252 / 1);
+    --fixed-alternative2-white: rgb(244 247 250 / 1);
+    --fixed-base-white: rgb(255 255 255 / 1);
+
+    // Other
+    --tran-duration: 0.3s ease-in-out;
+
+    // Indentations
+    --spacing0: 0;
+    --spacing4: 4px;
+    --spacing6: 6px;
+    --spacing8: 8px;
+    --spacing12: 12px;
+    --spacing16: 16px;
+    --spacing18: 18px;
+    --spacing20: 20px;
+    --spacing24: 24px;
+    --spacing32: 32px;
+    --spacing40: 40px;
+    --spacing48: 48px;
+    --spacing56: 56px;
+    --spacing64: 64px;
+
+    // =============== Images size ==================
+    --img-size-36: 36px;
+    --img-size-56: 56px;
+}

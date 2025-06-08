@@ -1,0 +1,53 @@
+<div class="main-banner">
+
+    <div class="main-banner__images">
+        <img
+            class="main-banner__img main-banner__img--third"
+            src="/src/assets/images/main-banner-3.png"
+            alt="Join our upcoming event"
+        >
+        <img
+            class="main-banner__img main-banner__img--second"
+            src="/src/assets/images/main-banner-2.png"
+            alt="Join our upcoming event2"
+        >
+        <img
+            class="main-banner__img main-banner__img--first"
+            src="/src/assets/images/main-banner-1.png"
+            alt="Join our upcoming event3"
+        >
+
+        <div class="main-banner__img main-banner__img-icon main-banner__img--fourth">
+            <img src="/src/assets/images/pen.svg" alt="Icon pen">
+        </div>
+        <div class="main-banner__img main-banner__img-icon main-banner__img--fifth">
+            <img
+                src="/src/assets/images/collor-pallet.svg"
+                alt="Icon pallet"
+            >
+        </div>
+    </div>
+
+    <div class="main-banner__content">
+
+        <h1 class="main-banner__title">
+            {{banner_title1}}<a class="main-banner__link link" href="#"
+            >{{ banner_title_link }}</a
+            >{{banner_title2}}
+        </h1>
+        <p class="main-banner__subtitle">{{banner_text}}</p>
+
+        <div class="main-banner__buttons">
+            <a href="/catalog.html" class="button button--primary button--lg">
+                {{ g_shop_now }}
+            </a>
+            <a href="/contact.html" class="button button--secondary button--lg">
+                {% from 'src/templates/partials/ui/icon.njk' import icon %} 
+                {{ icon("icon-play", "icon--blue") }}
+                {{ g_watch }}
+            </a>
+        </div>
+
+    </div>
+    
+</div>

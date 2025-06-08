@@ -1,0 +1,48 @@
+@use '../mixins' as *;
+@use '../ui/brakepoints' as *;
+
+.filter-opener {
+    opacity: 0;
+    visibility: hidden;
+    position: fixed;
+    inset: 0;
+    transform: translateY(20px);
+    z-index: 1000;
+    transition:
+        opacity var(--tran-duration),
+        transform var(--tran-duration);
+
+    &.active {
+        opacity: 1;
+        visibility: visible;
+        transform: translateY(0);
+    }
+
+    &__header {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 28px 16px;
+        background-color: var(--bg-alternative2);
+    }
+
+    &__title {
+        @include heading-h4;
+    }
+
+    &__content {
+        max-height: calc(100vh - 96px);
+        overflow-y: auto;
+
+        @include hide-scrollbar;
+    }
+
+    &__button {
+        padding: 16px;
+        background-color: var(--bg-alternative2);
+
+        & button {
+            width: 100%;
+        }
+    }
+}
