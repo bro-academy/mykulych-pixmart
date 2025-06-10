@@ -11,6 +11,10 @@
     // min width for desktop aside filter
     min-width: 218px;
 
+    &--desk {
+        padding: 0;
+    }
+
     &__section {
         display: flex;
         flex-direction: column;

@@ -1,4 +1,7 @@
 {
+    "explore_top": "Explore Top",
+    "ui_kits": "UI Kits",
+    "design_assets": "Design Assets",
     "g_clear_filters": "Clear all filters",
 
     "catalog": [
@@ -99,5 +102,4 @@
             "badge": ["popular"]
         }
     ]
-
 }

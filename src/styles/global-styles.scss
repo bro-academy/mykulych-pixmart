@@ -44,6 +44,11 @@ body {
     &--white {
         color: var(--color-primary-invert);
     }
+
+    &--16 {
+        width: 16px;
+        height: 16px;
+    }
 }
 
 h1,

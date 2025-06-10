@@ -4,7 +4,15 @@
 .catalog-banner {
     position: relative;
     overflow: hidden;
-    padding: 100px 20px;
+    padding: 64px 0 93px;
+
+    @include md {
+        padding: 64px 40px 100px;
+    }
+
+    @include lg {
+        padding: 64px 0 100px;
+    }
 
     &::before {
         content: '';
@@ -15,16 +23,32 @@
         bottom: 0;
         background: url('/src/assets/images/rectangle.png');
         background-repeat: no-repeat;
-        background-position: center;
+        background-position: -155px;
         background-size: auto;
         z-index: -1;
-    }
 
-    @include md {
-        padding: 64px 80px 100px;
+        @include md {
+            background-position: center left;
+        }
+
+        @include lg {
+            background-position: center;
+        }
     }
 
     &__title {
-        @include heading-h1;
+        @include heading-h2;
+
+        @include md {
+            @include heading-h1;
+        }
+    }
+
+    &__line {
+        display: block;
+    }
+
+    &__link {
+        color: var(--accent-link);
     }
 }
