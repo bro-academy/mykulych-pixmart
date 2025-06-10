@@ -10,6 +10,14 @@
         flex-direction: row;
         align-items: center;
         justify-content: space-between;
+        gap: 40px;
+    }
+
+    &__info {
+        display: flex;
+        flex-direction: column;
+        gap: 32px;
+        width: 100%;
     }
 
     &__heading {
@@ -37,20 +45,24 @@
         align-items: center;
         gap: 16px;
         transition: 0.4s ease-in-out;
+        width: 100%;
     }
 
     &__item {
-        padding: 24px;
+        padding: 22px;
         box-shadow: 0 4px 40px rgb(29 57 95 / 0.08);
         border-radius: 10px;
         max-width: 620px;
         width: 100%;
         display: flex;
         flex-direction: column;
-        gap: 16px;
         border: 2px solid transparent;
         cursor: pointer;
         transition: border-color var(--tran-duration);
+
+        @include lg {
+            padding: 25px;
+        }
 
         &:hover {
             border-color: var(--marina-800);
@@ -86,18 +98,19 @@
 
     &__answer {
         @include text-p2-regular;
+
+        margin-top: 16px;
     }
 }
 
 summary {
-    list-style: none; /* убирает стандартную точку в некоторых браузерах */
+    list-style: none;
 }
 
 summary::-webkit-details-marker {
-    display: none; /* полностью убирает встроенную стрелку */
+    display: none;
 }
 
-/* Поворачиваем стрелку при открытии */
 .faq__item[open] .faq__question::after {
     transform: rotate(180deg);
 }

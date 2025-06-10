@@ -1,20 +1,22 @@
 {% extends 'src/templates/layouts/base.njk' %}
 {% block content %}
 
-<section class="section section--catalog-banner">
-    <div class="section__wrapper">
-        <div class="section__content">
-            {% include 'src/templates/partials/catalog/catalog-banner.njk' %}
+<div class="catalog-sections">
+    <section class="section section--catalog-banner">
+        <div class="section__wrapper">
+            <div class="section__content">
+                {% include 'src/templates/partials/catalog/catalog-banner.njk' %}
+            </div>
         </div>
-    </div>
-</section>
+    </section>
 
-<section class="section section--catalog">
-    <div class="section__wrapper">
-        <div class="section__content">
-            {% include 'src/templates/partials/catalog/catalog.njk' %}
+    <section class="section section--catalog">
+        <div class="section__wrapper">
+            <div class="section__content">
+                {% include 'src/templates/partials/catalog/catalog.njk' %}
+            </div>
         </div>
-    </div>
-</section>
+    </section>
+</div>
 
 {% endblock %}

@@ -233,6 +233,8 @@
 
     &::placeholder {
         color: var(--fixed-secondary2);
+
+        @include text-p3-regular;
     }
 
     &--textarea {

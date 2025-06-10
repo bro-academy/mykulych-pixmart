@@ -42,6 +42,10 @@
         flex-direction: column;
         gap: 8px;
 
+        @include text-p1-regular;
+
+        color: var(--color-secondary2);
+
         &-title {
             @include heading-h3;
         }
@@ -61,8 +65,12 @@
         position: relative;
         display: flex;
         overflow: hidden;
-        min-height: 460px;
+        min-height: 496px;
         width: 100%;
+
+        @include lg {
+            min-height: 460px;
+        }
     }
 
     &__cards-wrapper {

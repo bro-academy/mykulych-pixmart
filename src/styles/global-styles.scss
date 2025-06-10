@@ -28,7 +28,7 @@ body {
     flex-direction: column;
     gap: 64px;
 
-    @include lg {
+    @include md {
         gap: 120px;
     }
 }

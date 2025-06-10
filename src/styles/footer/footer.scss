@@ -3,8 +3,16 @@
 
 .footer {
     width: 100%;
-    padding-top: 120px;
+    padding-top: 100px;
     margin-top: auto;
+
+    @include md {
+        padding-top: 184px;
+    }
+
+    @include lg {
+        padding-top: 188px;
+    }
 
     &__wrapper {
         &--bottom {
@@ -49,7 +57,8 @@
     &__logo {
         &-item {
             width: 300px;
-            height: 58px;
+            height: auto;
+            object-fit: contain;
         }
     }
 
@@ -86,7 +95,7 @@
         display: flex;
         flex-direction: column;
         align-items: flex-start;
-        gap: 8px;
+        gap: 4px;
     }
 
     &__link {
@@ -96,14 +105,15 @@
     }
 
     &__newsletter {
-        margin: 72px 0 32px;
+        margin: 72px 0 64px;
         display: flex;
         flex-direction: column;
-        gap: 64px;
+        gap: 32px;
         align-items: flex-start;
         width: 100%;
 
         @include md {
+            margin-bottom: 135px;
             flex-direction: row;
             align-items: center;
             justify-content: space-between;
@@ -152,13 +162,17 @@
             flex-direction: column;
             align-items: flex-start;
             gap: 32px;
-            padding: 24px 16px;
+            padding-block: 24px;
 
             @include md {
                 flex-direction: row;
                 align-items: center;
                 justify-content: space-between;
-                padding: 24px 80px;
+                padding-inline: 40px;
+            }
+
+            @include lg {
+                padding-inline: 0;
             }
         }
     }

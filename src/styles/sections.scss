@@ -17,6 +17,8 @@
         max-width: 1440px;
 
         @include md {
+            padding-inline: 40px;
+
             &::before {
                 content: '';
                 position: absolute;
@@ -32,6 +34,10 @@
                     right: 30%;
                 }
             }
+        }
+
+        @include lg {
+            padding-inline: 0;
         }
     }
 

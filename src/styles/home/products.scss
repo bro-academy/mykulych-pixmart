@@ -5,10 +5,13 @@
     grid-template-columns: repeat(5, 1fr);
     min-height: 272px;
     display: grid;
-    overflow: auto;
     gap: 16px;
 
     @include hide-scrollbar;
+
+    @include lg {
+        gap: 32px;
+    }
 
     &__card {
         flex-direction: column;
@@ -19,6 +22,10 @@
         display: flex;
         align-items: center;
         cursor: pointer;
+
+        @include md {
+            min-width: auto;
+        }
     }
 
     &__illustration {
@@ -29,6 +36,14 @@
         transition:
             color var(--tran-duration),
             background-color var(--tran-duration);
+
+        @include md {
+            padding: 37px 13px;
+        }
+
+        @include lg {
+            padding: 37px;
+        }
 
         &:hover {
             background-color: #0265dc;

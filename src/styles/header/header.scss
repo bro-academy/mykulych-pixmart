@@ -31,6 +31,21 @@
 
         @include md {
             padding-block: 24px;
+            gap: 30px;
+        }
+
+        @include lg {
+            gap: 25px;
+        }
+    }
+
+    &__logo {
+        height: auto;
+
+        &-item {
+            width: 107px;
+            height: auto;
+            object-fit: contain;
         }
     }
 
@@ -61,15 +76,21 @@
     &__list {
         display: flex;
         flex-direction: column;
-        gap: 8px;
+        gap: 40px;
         position: relative;
         z-index: 100;
+        padding: 32px;
 
         @include md {
             flex-direction: row;
-            gap: 24px;
-            margin-left: 32px;
+            gap: 0;
+            margin-left: 0;
+            padding: 0;
         }
+    }
+
+    &__item {
+        @include link-l3;
     }
 
     &__actions {
@@ -84,6 +105,8 @@
 
         @include md {
             @include show-element;
+
+            min-width: 240px;
         }
     }
 
