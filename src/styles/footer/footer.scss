@@ -139,6 +139,11 @@
         }
 
         &-title {
+            display: flex;
+            flex-direction: column;
+        }
+
+        &-line {
             @include heading-h4;
         }
 
