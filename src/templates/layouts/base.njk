@@ -124,6 +124,40 @@
             });
 
         </script>
+        
+        {# Script to remove the dash in the link in each first element of the line #}
+        <script>
+
+            function markRowStart(containerSelector, itemSelector, className = 'row-start') {
+            const container = document.querySelector(containerSelector);
+            if (!container) return;
+
+            const items = container.querySelectorAll(itemSelector);
+            let prevTop = null;
+
+            // Удаляем старые
+            items.forEach(item => item.classList.remove(className));
+
+            items.forEach(item => {
+            const top = item.getBoundingClientRect().top;
+
+            if (prevTop === null || top > prevTop) {
+            item.classList.add(className); // новый ряд
+            }
+
+            prevTop = top;
+            });
+            }
+
+            window.addEventListener('load', () => {
+            markRowStart('.footer__legal', '.footer__legal-link');
+            });
+
+            window.addEventListener('resize', () => {
+            markRowStart('.footer__legal', '.footer__legal-link');
+            });
+
+        </script>
 
     </body>
 </html>

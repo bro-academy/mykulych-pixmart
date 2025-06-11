@@ -166,7 +166,6 @@
 
             @include md {
                 flex-direction: row;
-                align-items: center;
                 justify-content: space-between;
                 padding-inline: 40px;
             }
@@ -182,25 +181,33 @@
 
         display: flex;
         align-items: center;
+        flex-wrap: wrap;
         gap: 21px;
 
         &-link {
             color: var(--color-secondary2-invert);
             display: flex;
             align-items: center;
+            white-space: nowrap;
+            position: relative;
 
-            &:not(:last-child)::after {
+            &:not(:first-child)::before {
                 content: '';
-                position: relative;
+                position: absolute;
                 display: inline-block;
                 height: 24px;
                 border-right: 1px solid var(--color-secondary2-invert);
-                left: 10px;
+                left: -11px;
+            }
+
+            &.row-start::before {
+                content: none;
             }
         }
     }
 
     &__copyright {
         color: var(--color-secondary2-invert);
+        min-width: 305px;
     }
 }
