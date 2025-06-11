@@ -3,7 +3,11 @@
 
 .contact {
     &__info {
-        width: 50%;
+        width: 100%;
+
+        @include md {
+            width: 50%;
+        }
     }
 
     &__texts {
