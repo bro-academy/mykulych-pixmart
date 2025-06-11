@@ -41,6 +41,7 @@
                 "type": "quote",
                 "quote": {
                     "icon": "/src/assets/images/quote.svg",
+                    "alt": "Quotation mark icon before the quote",
                     "text": "Typography is not just the art of arranging type but the craft of breathing life into characters, turning words into stories that captivate the soul."
                 }
             },

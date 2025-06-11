@@ -15,7 +15,7 @@
             {{ picture("blog-section__image", post.image, post.alt) }}
             <div class="blog-section__text">
                 <h3 class="blog-section__title">{{ post.title }}</h3>
-                <time class="blog-section__date" datetime="{{ post.date }}">{{ post.dateDisplay }}</time>
+                <p class="blog-section__date" datetime="{{ post.date }}">{{ post.dateDisplay }}</p>
             </div>
         </div>
     {% endfor %}

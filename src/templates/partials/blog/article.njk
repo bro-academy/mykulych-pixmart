@@ -24,7 +24,7 @@
 
         {% elif block.type == "quote" %}
             <blockquote class="quote">
-                <img class="quote__icon" src="{{ block.quote.icon }}" />
+                <img class="quote__icon" src="{{ block.quote.icon }}" alt="{{ block.quote.alt }}"/>
                 <p class="quote__text">{{ block.quote.text }}</p>
             </blockquote>
         {% endif %}

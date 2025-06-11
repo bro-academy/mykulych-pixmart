@@ -57,10 +57,10 @@
 
         {# Script for Input Range #}
         <script>
-            const minRange = document.getElementById('min');
-            const maxRange = document.getElementById('max');
-            const minValue = document.getElementById('min-value');
-            const maxValue = document.getElementById('max-value');
+            const minRange = document.querySelector('.range-slider__input--min');
+            const maxRange = document.querySelector('.range-slider__input--max');
+            const minValue = document.querySelector('.range-values-price--min');
+            const maxValue = document.querySelector('.range-values-price--max');
             const range = document.querySelector('.range-slider__range');
 
             function updateValues() {
@@ -68,7 +68,7 @@
             let max = parseInt(maxRange.value);
 
             if (min > max) {
-                [min, max] = [max, min]; // swap
+            [min, max] = [max, min]; // swap
             }
 
             minValue.textContent = `€${min}`;
@@ -85,6 +85,7 @@
             maxRange.addEventListener('input', updateValues);
 
             updateValues();
+
         </script>
 
         {# Script for form-fields error #}
