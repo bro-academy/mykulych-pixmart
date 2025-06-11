@@ -24,7 +24,8 @@
                 </nav>
 
                 <div class="header__actions">
-                    <input type="search" class="header__search form-field form-field--header" placeholder="Search for Digital Assets">
+                    <label for="header-search" class="visually-hidden">Search the site</label>
+                    <input type="search" id="header-search" class="header__search form-field form-field--header" placeholder="Search for Digital Assets">
                     <button class="header__button button button--secondary button--icon-md" aria-label="Search">
                         {% from 'src/templates/partials/ui/icon.njk' import icon %}
                         {{ icon("icon-search-md") }}
