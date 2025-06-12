@@ -1,0 +1,44 @@
+<header class="header">
+    <div class="header__wrapper">
+        <div class="header__content">
+
+            <div class="header__container">
+                <button class="burger button button--primary button--icon-md" type="button" aria-label="Menu">
+                    <span class="burger__line"></span>
+                    <span class="burger__line"></span>
+                    <span class="burger__line"></span>
+                </button>
+
+                <a href="/index.html" class="header__logo">
+                    <img class="header__logo-item" src="/src/assets/images/pixmart-logo.svg" alt="Project Logo">
+                </a>
+
+                <nav class="header__nav">
+                    <ul class="header__list">
+                        <li class="header__item"><a href="/ui.html" class="button button--tertiary button--sm">About</a></li>
+                        <li class="header__item"><a href="/catalog" class="button button--tertiary button--sm">Products</a></li>
+                        <li class="header__item"><a href="/index.html" class="button button--tertiary button--sm">Creators</a></li>
+                        <li class="header__item"><a href="/blog.html" class="button button--tertiary button--sm">Blog</a></li>
+                        <li class="header__item"><a href="/contact.html" class="button button--tertiary button--sm">Contact</a></li>
+                    </ul>
+                </nav>
+
+                <div class="header__actions">
+                    <label for="header-search" class="visually-hidden">Search the site</label>
+                    <input type="search" id="header-search" class="header__search form-field form-field--header" placeholder="Search for Digital Assets">
+                    <button class="header__button button button--secondary button--icon-md" aria-label="Search">
+                        {% from 'src/templates/partials/ui/icon.njk' import icon %}
+                        {{ icon("icon-search-md") }}
+                    </button>
+                    <button class="header__button button button--primary button--icon-md" aria-label="Search">
+                        {{ icon("icon-shopping-bag") }}
+                    </button>
+                </div>
+
+            </div>
+            
+        </div>
+    </div>
+</header>
+
+

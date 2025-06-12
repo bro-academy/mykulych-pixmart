@@ -1,0 +1,145 @@
+@use '../ui/brakepoints' as *;
+@use '../ui/mixins' as *;
+
+.pricing {
+    display: flex;
+    flex-direction: column;
+    gap: 48px;
+
+    @include md {
+        gap: 104px;
+    }
+
+    @include lg {
+        gap: 80px;
+    }
+
+    &__heading {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 16px;
+    }
+
+    &__tag {
+        @include text-p2-regular;
+
+        color: var(--marina-800);
+        text-transform: uppercase;
+    }
+
+    &__title {
+        text-align: center;
+    }
+
+    &__cards {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 16px;
+
+        @include md {
+            flex-direction: row;
+        }
+    }
+
+    &__card {
+        box-shadow: 0 4px 40px rgb(29 57 95 / 0.08);
+        padding: 32px;
+        border-radius: 20px;
+        display: flex;
+        flex-direction: column;
+        gap: 32px;
+        width: 100%;
+        max-width: 440px;
+        cursor: pointer;
+        position: relative;
+
+        &--bestseller {
+            border: 2px solid var(--marina-800);
+            margin-bottom: 32px;
+            padding: 30px;
+
+            @include md {
+                transform: translateY(-7%);
+                margin-bottom: 0;
+            }
+        }
+    }
+
+    &__badge {
+        background-color: var(--marina-800);
+        color: var(--bg-base);
+        padding: 7px 24px;
+
+        @include heading-h5;
+
+        position: absolute;
+        top: -1px;
+        right: -1px;
+        border-bottom-left-radius: 24px;
+        border-top-right-radius: 20px;
+    }
+
+    &__offer {
+        display: flex;
+        flex-direction: column;
+        gap: 16px;
+        align-items: flex-start;
+
+        &-title {
+            @include heading-h5;
+
+            color: var(--color-primary);
+        }
+
+        &-price {
+            @include heading-h2;
+
+            color: var(--color-primary);
+        }
+
+        &-duration {
+            @include text-p2-regular;
+
+            color: #808080;
+        }
+    }
+
+    &__features {
+        padding-top: 39px;
+        border-top: 1px solid var(--line);
+        display: flex;
+        flex-direction: column;
+        gap: 40px;
+    }
+
+    &__plate {
+        display: flex;
+        flex-direction: column;
+        gap: 16px;
+
+        @include text-p2-regular;
+
+        &-item {
+            display: flex;
+            align-items: center;
+            gap: 16px;
+
+            &::before {
+                content: '';
+                width: 16px;
+                height: 16px;
+                display: block;
+                flex-shrink: 0;
+                background-image: url('/src/assets/images/check-m.svg');
+            }
+        }
+    }
+
+    &__button {
+        &--bestseller {
+            background-color: var(--marina-800);
+        }
+    }
+}

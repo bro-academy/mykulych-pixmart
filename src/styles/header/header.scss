@@ -1,0 +1,168 @@
+@use '../ui/brakepoints' as *;
+@use '../ui/mixins' as *;
+
+.header {
+    --mobile-header-height: 92px;
+
+    background-color: #ffffff;
+    position: relative;
+
+    &__content {
+        margin: 0 auto;
+        width: 100%;
+        max-width: 1440px;
+        padding-inline: 16px;
+
+        @include md {
+            padding-inline: 40px;
+        }
+
+        @include lg {
+            padding-inline: 80px;
+        }
+    }
+
+    &__container {
+        display: flex;
+        align-items: center;
+        gap: 16px;
+        position: relative;
+        padding-block: 26px;
+
+        @include md {
+            padding-block: 24px;
+            gap: 30px;
+        }
+
+        @include lg {
+            gap: 25px;
+        }
+    }
+
+    &__logo {
+        height: auto;
+
+        &-item {
+            width: 107px;
+            height: auto;
+            object-fit: contain;
+        }
+    }
+
+    &__nav {
+        position: fixed;
+        max-height: 0;
+        overflow: hidden;
+        background-color: var(--bg-base);
+        width: 100vw;
+        top: var(--mobile-header-height);
+        left: 0;
+        transition: max-height 0.4s ease-in-out;
+        z-index: 9999;
+
+        @include md {
+            position: static;
+            max-height: none;
+            overflow: visible;
+        }
+
+        &.active {
+            height: calc(100vh - var(--mobile-header-height));
+            background-color: var(--bg-base);
+            max-height: 100%;
+        }
+    }
+
+    &__list {
+        display: flex;
+        flex-direction: column;
+        gap: 40px;
+        position: relative;
+        z-index: 100;
+        padding: 32px;
+
+        @include md {
+            flex-direction: row;
+            gap: 0;
+            margin-left: 0;
+            padding: 0;
+            flex-wrap: wrap;
+        }
+    }
+
+    &__item {
+        @include link-l3;
+    }
+
+    &__actions {
+        display: flex;
+        gap: 8px;
+        align-items: center;
+        margin-left: auto;
+    }
+
+    &__search {
+        @include hide-element;
+
+        @include md {
+            @include show-element;
+
+            min-width: 240px;
+        }
+    }
+
+    &__button {
+        &:first-of-type {
+            @include md {
+                @include hide-element;
+            }
+        }
+    }
+}
+
+.burger {
+    position: relative;
+    flex-direction: column;
+    width: 40px;
+    height: 40px;
+
+    @include md {
+        display: none;
+    }
+
+    &__line {
+        position: absolute;
+        inset-inline: 5px;
+        height: 2px;
+        background-color: var(--bg-base);
+        border-radius: 2px;
+        transition: 0.3s;
+
+        &:nth-child(1) {
+            top: 11px;
+        }
+
+        &:nth-child(2) {
+            top: 17px;
+        }
+
+        &:nth-child(3) {
+            top: 23px;
+        }
+    }
+}
+
+/* Burger in a cross */
+.burger.active .burger__line:nth-child(1) {
+    top: 50%;
+    transform: rotate(45deg);
+}
+
+.burger.active .burger__line:nth-child(2) {
+    opacity: 0;
+}
+
+.burger.active .burger__line:nth-child(3) {
+    top: 50%;
+    transform: rotate(-45deg);
+}

@@ -1,0 +1,105 @@
+{
+    "explore_top": "Explore Top",
+    "ui_kits": "UI Kits",
+    "design_assets": "Design Assets",
+    "g_clear_filters": "Clear all filters",
+
+    "catalog": [
+        {
+            "title": "Career Success",
+            "meta": "Guidance · Jobs",
+            "price": 0,
+            "image": "dream",
+            "alt": "Career Success",
+            "badge": ["soldout"]
+        },
+        {
+            "title": "Career Success",
+            "meta": "Guidance · Jobs",
+            "price": 20.99,
+            "image": "career",
+            "alt": "Design Thinking Guide",
+            "badge": ["new"]
+        },
+        {
+            "title": "Dream Homes",
+            "meta": "Real Estate · Modern",
+            "price": 18.75,
+            "image": "dream",
+            "alt": "Design Thinking Guide",
+            "badge": ["popular"]
+        },
+        {
+            "title": "Foodish Catering",
+            "meta": "Food · Events",
+            "price": 15.99,
+            "image": "foodish",
+            "alt": "Foodish Catering",
+            "badge": ["popular"]
+        },
+        {
+            "title": "Caring Hearts",
+            "meta": "Healthcare · Support",
+            "price": 19.99,
+            "image": "caring",
+            "alt": "Caring Hearts support organisation",
+            "badge": ["new"]
+        },
+        {
+            "title": "Admin Dashboard",
+            "meta": "Data · Tools",
+            "price": 15.99,
+            "image": "admin",
+            "alt": "Admin Dashboard tool",
+            "badge": ["soldout"]
+        },
+        {
+            "title": "Banking Redefined",
+            "meta": "Finance · Secure",
+            "price": 12.49,
+            "image": "banking",
+            "alt": "Banking Redefined security",
+            "badge": ["soldout"]
+        },
+        {
+            "title": "Exploring Fun",
+            "meta": "Travel · Adventure",
+            "price": 41.99,
+            "image": "exploring",
+            "alt": "Design Thinking Guide",
+            "badge": ["new"]
+        },
+        {
+            "title": "Analytical Dashboard",
+            "meta": "Data · Tools",
+            "price": 10.99,
+            "image": "analytical",
+            "alt": "Analytical Dashboard admin",
+            "badge": ["popular"]
+        },
+        {
+            "title": "Career Success",
+            "meta": "Guidance · Jobs",
+            "price": 20.99,
+            "image": "career",
+            "alt": "Design Thinking Guide",
+            "badge": ["new"]
+        },
+        {
+            "title": "Admin Dashboard",
+            "meta": "Data · Tools",
+            "price": 15.99,
+            "image": "admin",
+            "alt": "Admin Dashboard tool",
+            "badge": ["new"]
+        },
+        {
+            "title": "Banking Redefined",
+            "meta": "Finance · Secure",
+            "price": 12.49,
+            "image": "banking",
+            "alt": "Banking Redefined security",
+            "badge": ["popular"]
+        }
+    ]
+}

@@ -1,0 +1,20 @@
+{% extends 'src/templates/layouts/base.njk' %}
+{% block content %}
+
+<section class="blogs">
+    <div class="section__wrapper">
+        <div class="section__content">
+            {% include 'src/templates/partials/blog/blog.njk' %}
+        </div>
+    </div>
+</section>
+
+<section class="articles">
+    <div class="section__wrapper">
+        <div class="section__content">
+            {% include 'src/templates/partials/blog/related-articles.njk' %}
+        </div>
+    </div>
+</section>
+
+{% endblock %}

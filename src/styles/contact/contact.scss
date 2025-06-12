@@ -1,0 +1,15 @@
+@use '../ui/mixins' as *;
+@use '../ui/brakepoints' as *;
+
+.contact {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    padding-top: 64px;
+
+    @include md {
+        flex-direction: row;
+        gap: 40px;
+        align-items: flex-end;
+    }
+}

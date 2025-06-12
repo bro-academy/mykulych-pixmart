@@ -1,0 +1,12 @@
+@use "../ui/mixins" as *;
+@use "../ui/brakepoints" as *;
+
+.blog {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+
+    @include md {
+        flex-direction: row;
+    }
+}

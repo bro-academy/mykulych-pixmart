@@ -1,0 +1,48 @@
+{% for item in catalog %}
+<div class="product{% if 'soldout' in item.badge %} product--soldout{% endif %}">
+
+    <div class="product__illustration">
+        {% from 'src/templates/partials/ui/icon.njk' import picture %}
+        {{ picture("product__illustration-image", item.image, item.alt) }}
+
+        {% if item.badge %}
+        {% for badge in item.badge %}
+            {% if badge == 'new' %}
+                <span class="product__label label label--new">New</span>
+            {% elif badge == 'popular' %}
+                <span class="product__label label label--popular">Popular</span>
+            {% elif badge == 'soldout' %}
+                <span class="product__label label label--soldout">Soldout</span>
+            {% endif %}
+        {% endfor %}
+    {% endif %}
+
+    </div>
+
+    <div class="product__content">
+        <div class="product__text">
+            <p class="product__text-title">{{ item.title }}</p>
+            <p class="product__text-meta">{{ item.meta }}</p>
+        </div>
+
+        <div class="product-actions">
+            <span class="product-actions__price">€{{ item.price }}</span>
+            <div class="product-actions__buttons">
+                {% from 'src/templates/partials/ui/icon.njk' import icon %}
+                <button class="button button--secondary button--icon-md">
+                    {{ icon("icon-heart") }}
+                </button>
+                <button class="button button--primary button--icon-md">
+                    {{ icon("icon-shopping-bag") }}
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <div class="product__hover-button">
+        <a class="button button--primary button--lg" href="#">{{ g_go }}</a>
+    </div>
+
+</div>
+{% endfor %}
+

@@ -1,0 +1,116 @@
+@use '../ui/brakepoints' as *;
+@use '../ui/mixins' as *;
+
+.faq {
+    display: flex;
+    flex-direction: column;
+    gap: 64px;
+
+    @include md {
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+        gap: 40px;
+    }
+
+    &__info {
+        display: flex;
+        flex-direction: column;
+        gap: 32px;
+        width: 100%;
+    }
+
+    &__heading {
+        display: flex;
+        flex-direction: column;
+        gap: 16px;
+    }
+
+    &__tag {
+        @include text-p2-regular;
+
+        color: var(--marina-800);
+        text-transform: uppercase;
+    }
+
+    &__button {
+        @include md {
+            max-width: 223px;
+        }
+    }
+
+    &__accordion {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 16px;
+        transition: 0.4s ease-in-out;
+        width: 100%;
+    }
+
+    &__item {
+        padding: 22px;
+        box-shadow: 0 4px 40px rgb(29 57 95 / 0.08);
+        border-radius: 10px;
+        max-width: 620px;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        border: 2px solid transparent;
+        cursor: pointer;
+        transition: border-color var(--tran-duration);
+
+        @include lg {
+            padding: 25px;
+        }
+
+        &:hover {
+            border-color: var(--marina-800);
+        }
+    }
+
+    &__question {
+        @include heading-h5;
+
+        position: relative;
+        padding-right: 32px;
+
+        &::after {
+            content: '';
+            background-image: url('/src/assets/images/chevron-down.svg');
+            background-repeat: no-repeat;
+            background-size: contain;
+            position: absolute;
+            border-radius: 8px;
+            border: 2px solid var(--seporator-bold);
+            top: 0;
+            right: 0;
+            width: 16px;
+            height: 16px;
+            padding: 6px;
+        }
+
+        &:hover::after {
+            background-color: var(--seporator);
+            border-color: var(--seporator);
+        }
+    }
+
+    &__answer {
+        @include text-p2-regular;
+
+        margin-top: 16px;
+    }
+}
+
+summary {
+    list-style: none;
+}
+
+summary::-webkit-details-marker {
+    display: none;
+}
+
+.faq__item[open] .faq__question::after {
+    transform: rotate(180deg);
+}

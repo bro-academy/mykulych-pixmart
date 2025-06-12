@@ -1,0 +1,50 @@
+@use '../ui/mixins' as *;
+@use 'variables' as *;
+
+.link {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    cursor: pointer;
+    border: 2px solid transparent;
+    border-radius: 5px;
+    outline-offset: 0;
+    transition: color var(--tran-duration);
+
+    &:hover {
+        color: var(--marina-600);
+    }
+
+    &:focus {
+        color: var(--accent-link);
+        border-color: var(--marina-600);
+        outline: 2px solid var(--marina-600);
+    }
+
+    &--dark {
+        @include link-l1;
+
+        color: var(--color-primary);
+
+        &:focus {
+            color: var(--color-primary);
+        }
+    }
+
+    &--accent {
+        color: var(--accent-link);
+    }
+
+    &--dotted {
+        text-decoration-line: underline;
+        text-decoration-style: dotted;
+    }
+
+    &--small {
+        @include link-l4;
+    }
+
+    &--large {
+        @include link-l2;
+    }
+}

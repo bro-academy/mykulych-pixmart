@@ -1,0 +1,22 @@
+@use '../ui/mixins' as *;
+@use '../ui/brakepoints' as *;
+
+.catalog {
+    display: flex;
+    gap: 24px;
+
+    &__load-button {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-top: 48px;
+    }
+
+    &__aside-filter {
+        display: none;
+
+        @include lg {
+            display: block;
+        }
+    }
+}

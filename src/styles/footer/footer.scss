@@ -1,0 +1,218 @@
+@use '../ui/brakepoints' as *;
+@use '../ui/mixins' as *;
+
+.footer {
+    width: 100%;
+    padding-top: 100px;
+    margin-top: auto;
+
+    @include md {
+        padding-top: 184px;
+    }
+
+    @include lg {
+        padding-top: 188px;
+    }
+
+    &__wrapper {
+        &--bottom {
+            background-color: var(--fixed-base);
+        }
+    }
+
+    &__content {
+        margin: 0 auto;
+        width: 100%;
+        max-width: 1440px;
+        padding-inline: 16px;
+
+        @include md {
+            padding-inline: 40px;
+        }
+
+        @include lg {
+            padding-inline: 80px;
+        }
+    }
+
+    &__top {
+        display: flex;
+        align-items: flex-start;
+        flex-direction: column;
+        gap: 32px;
+        width: 100%;
+
+        @include md {
+            flex-direction: row;
+        }
+    }
+
+    &__brand {
+        display: flex;
+        align-items: flex-start;
+        flex-direction: column;
+        gap: 16px;
+    }
+
+    &__logo {
+        &-item {
+            width: 300px;
+            height: auto;
+            object-fit: contain;
+        }
+    }
+
+    &__description {
+        @include text-p2-regular;
+
+        @include md {
+            max-width: 320px;
+        }
+    }
+
+    &__links {
+        display: flex;
+        align-items: flex-start;
+        flex-direction: column;
+        gap: 32px;
+        width: 100%;
+
+        @include md {
+            flex-direction: row;
+            justify-content: flex-end;
+            gap: 64px;
+        }
+    }
+
+    &__title {
+        @include heading-h5;
+    }
+
+    &__list {
+        @include text-p2-regular;
+
+        margin-top: 16px;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 4px;
+    }
+
+    &__link {
+        color: var(--color-secondary);
+
+        @include text-p2-regular;
+    }
+
+    &__newsletter {
+        margin: 72px 0 64px;
+        display: flex;
+        flex-direction: column;
+        gap: 32px;
+        align-items: flex-start;
+        width: 100%;
+
+        @include md {
+            margin-bottom: 135px;
+            flex-direction: row;
+            align-items: center;
+            justify-content: space-between;
+        }
+    }
+
+    &__social {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+    }
+
+    &__form {
+        display: flex;
+        flex-direction: column;
+        gap: 24px;
+        width: 100%;
+
+        @include md {
+            flex-direction: row;
+            align-items: center;
+            justify-content: end;
+        }
+
+        &-title {
+            display: flex;
+            flex-direction: column;
+        }
+
+        &-line {
+            @include heading-h4;
+        }
+
+        &-group {
+            display: flex;
+            gap: 8px;
+        }
+
+        &-input {
+            @include md {
+                min-width: 240px;
+            }
+        }
+    }
+
+    &__bottom {
+        width: 100%;
+
+        &-container {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            gap: 32px;
+            padding-block: 24px;
+
+            @include md {
+                flex-direction: row;
+                justify-content: space-between;
+                padding-inline: 40px;
+            }
+
+            @include lg {
+                padding-inline: 0;
+            }
+        }
+    }
+
+    &__legal {
+        @include text-p2-regular;
+
+        display: flex;
+        align-items: center;
+        flex-wrap: wrap;
+        gap: 21px;
+
+        &-link {
+            color: var(--color-secondary2-invert);
+            display: flex;
+            align-items: center;
+            white-space: nowrap;
+            position: relative;
+
+            &:not(:first-child)::before {
+                content: '';
+                position: absolute;
+                display: inline-block;
+                height: 24px;
+                border-right: 1px solid var(--color-secondary2-invert);
+                left: -11px;
+            }
+
+            &.row-start::before {
+                content: none;
+            }
+        }
+    }
+
+    &__copyright {
+        color: var(--color-secondary2-invert);
+        min-width: 305px;
+    }
+}

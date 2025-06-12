@@ -1,0 +1,18 @@
+<div class="filter-opener">
+
+    <div class="filter-opener__header">
+        <p class="filter-opener__title">Filters</p>
+        <button class="filter-opener__button button button--secondary button--icon-md">
+            {% from 'src/templates/partials/ui/icon.njk' import icon %}
+            {{ icon("icon-x-close") }}
+        </button>
+    </div>
+
+    <div class="filter-opener__content">
+        {% include 'src/templates/partials/catalog/filter-mob.njk' %}
+        <div class="filter-opener__button">
+            <button class="button button--primary button--lg">Save</button>
+        </div>
+    </div>
+</div>
+

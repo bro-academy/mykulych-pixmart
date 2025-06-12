@@ -1,0 +1,61 @@
+{% extends 'src/templates/layouts/base.njk' %}
+{% block content %}
+
+<section class="banner">
+    <div class="section__wrapper">
+        <div class="section__content">
+            {% include 'src/templates/partials/home/main-banner.njk' %}
+        </div>
+    </div>
+</section>
+
+<section class="product">
+    <div class="section__wrapper">
+        <div class="section__content">
+            {% include 'src/templates/partials/home/products.njk' %}
+        </div>
+    </div>
+</section>
+
+<section class="categorie">
+    <div class="section__wrapper">
+        <div class="section__content">
+            {% include 'src/templates/partials/home/categories.njk' %}
+        </div>
+    </div>
+</section>
+
+<section class="trendings">
+    <div class="section__wrapper">
+        <div class="section__content">
+            {% include 'src/templates/partials/home/trending.njk' %}
+        </div>
+    </div>
+</section>
+
+<section class="pricings">
+    <div class="section__wrapper">
+        <div class="section__content">
+            {% include 'src/templates/partials/home/pricing.njk' %}
+        </div>
+    </div>
+</section>
+
+<section class="faqs">
+    <div class="section__wrapper">
+        <div class="section__content">
+            {% include 'src/templates/partials/home/faq.njk' %}
+        </div>
+    </div>
+</section>
+
+<section class="our-blog">
+    <div class="section__wrapper">
+        <div class="section__content">
+            {% include 'src/templates/partials/home/blog-section.njk' %}
+        </div>
+    </div>
+</section>
+
+
+{% endblock %}

@@ -1,0 +1,36 @@
+@use '../ui/mixins' as *;
+@use '../ui/brakepoints' as *;
+
+.banner {
+    &::before {
+        content: '';
+        position: absolute;
+        height: 604px;
+        width: 100%;
+        top: 0;
+        left: 0;
+        z-index: -1;
+        background: linear-gradient(180deg, #F0F6FD 0.2%, rgb(255 255 255 / 0) 99.8%);
+
+    }
+
+    &__content {
+        padding-block: 64px;
+    }
+
+    &__title {
+        padding-top: 24px;
+
+        @include heading-h2;
+
+        @include md {
+            @include heading-h1;
+        }
+    }
+
+    &__image {
+        max-width: 100%;
+        height: auto;
+        border-radius: 12px;
+    }
+}

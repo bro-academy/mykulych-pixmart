@@ -1,0 +1,43 @@
+<div class="main-banner">
+
+    <div class="main-banner__images">
+
+        {% from 'src/templates/partials/ui/icon.njk' import picture %}
+        {{ picture("main-banner__img main-banner__img--third", "main-banner-3", "Join our upcoming event") }}
+        {{ picture("main-banner__img main-banner__img--second", "main-banner-2", "Join our upcoming event") }}
+        {{ picture("main-banner__img main-banner__img--first", "main-banner-1", "Join our upcoming event") }}
+
+        <div class="main-banner__img main-banner__img--icon main-banner__img--fourth">
+            <img src="/src/assets/images/pen.svg" alt="Icon pen">
+        </div>
+        <div class="main-banner__img main-banner__img--icon main-banner__img--fifth">
+            <img
+                src="/src/assets/images/collor-pallet.svg"
+                alt="Icon pallet"
+            >
+        </div>
+    </div>
+
+    <div class="main-banner__content">
+
+        <h1 class="main-banner__title">
+            {{banner_title1}}<a class="main-banner__link link" href="#"
+            >{{ banner_title_link }}</a
+            >{{banner_title2}}
+        </h1>
+        <p class="main-banner__subtitle">{{banner_text}}</p>
+
+        <div class="main-banner__buttons">
+            <a href="/catalog.html" class="button button--primary button--lg">
+                {{ g_shop_now }}
+            </a>
+            <a href="/contact.html" class="button button--secondary button--lg">
+                {% from 'src/templates/partials/ui/icon.njk' import icon %} 
+                {{ icon("icon-play", "icon--blue") }}
+                {{ g_watch }}
+            </a>
+        </div>
+
+    </div>
+    
+</div>

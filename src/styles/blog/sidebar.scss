@@ -1,0 +1,98 @@
+@use '../ui/mixins' as *;
+@use "../ui/brakepoints" as *;
+
+.sidebar {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    width: 100%;
+    padding-top: 48px;
+
+    @include md {
+        max-width: 260px;
+    }
+
+    &__author {
+        display: flex;
+        gap: 16px;
+        align-items: center;
+    }
+
+    &__illustration {
+        width: 60px;
+        height: 60px;
+    }
+
+    &__info {
+        &-name {
+            @include heading-h5;
+        }
+
+        &-date {
+            @include text-p2-regular;
+
+            color: var(--color-secondary2);
+        }
+    }
+
+    &__section {
+        padding-top: 40px;
+        display: flex;
+        flex-direction: column;
+        gap: 24px;
+        border-top: 2px solid var(--color-primary);
+    }
+
+    &__title {
+        @include heading-h4;
+    }
+
+    &__list {
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
+    }
+
+    &__link {
+        @include text-p2-regular;
+
+        color: var(--color-secondary);
+
+        &::before {
+            content: '';
+            width: 8px;
+            height: 8px;
+            background-color: var(--marina-800);
+            border-radius: 50%;
+        }
+
+        &--active {
+            padding-left: 16px;
+            color: var(--color-primary);
+
+            @include link-l2;
+        }
+    }
+
+    &__article {
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
+
+        &:not(:last-child) {
+            border-bottom: 1px solid var(--line);
+            padding-bottom: 24px;
+            width: 100%;
+        }
+
+        &-text {
+            @include heading-h5;
+        }
+
+        &-date {
+            @include text-p2-regular;
+
+            color: var(--color-secondary);
+        }
+    }
+}

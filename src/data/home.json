@@ -1,0 +1,172 @@
+{
+    "banner_title1": "Craft Your Success with Our",
+    "banner_title_link": "Digital",
+    "banner_title2": "Assets",
+    "banner_text": "From our inspiring illustrations to dynamic UI/UX kits, elevate your projects with our premium digital design resources.",
+    "g_shop_now": "Shop Now",
+    "g_watch": "Watch About Us",
+
+    "products": [
+        {
+            "image": "../../assets/images/ui-kits.svg",
+            "text": "UI Kits",
+            "alt": "UI Kits"
+        },
+        {
+            "image": "../../assets/images/social-media.svg",
+            "text": "Social Media",
+            "alt": "Social Media"
+        },
+        {
+            "image": "../../assets/images/presentation.svg",
+            "text": "Presentation",
+            "alt": "Presentation"
+        },
+        {
+            "image": "../../assets/images/fonts.svg",
+            "text": "Fonts",
+            "alt": "Fonts"
+        },
+        {
+            "image": "../../assets/images/illustration.svg",
+            "text": "Illustration",
+            "alt": "Illustration"
+        }
+    ],
+
+    "g_categories": "Categories",
+    "g_discover": "Discover Assets for Every Projects",
+    "g_fonts_icons": "From fonts and icons to mockups and templates, our comprehensive categories ensure that you find exactly what you need to your projects.",
+
+    "g_trending": "Trending",
+    "g_popular_products": "Popular Products",
+    "g_go": "Go to product",
+    "items": [
+        {
+            "image": "travel-hero",
+            "alt": "Travel Hero - adventures,journey help site",
+            "title": "Travel Hero",
+            "meta": "Adventure • Journey",
+            "price": "€29.99",
+            "badge": "/src/assets/images/label-badge.svg"
+        },
+        {
+            "image": "real-estate",
+            "alt": "Healthcare help website",
+            "title": "Healthcare Pro",
+            "meta": "Medical • Wellness",
+            "price": "€15.99",
+            "badge": "/src/assets/images/label-badge.svg"
+        },
+        {
+            "image": "foodish-delight",
+            "alt": "Food catering service",
+            "title": "Foodish Delight",
+            "meta": "Catering • Food",
+            "price": "€31.99"
+        },
+        {
+            "image": "real-estate",
+            "alt": "Modern home design guides",
+            "title": "Real Estate",
+            "meta": "Modern • Homes",
+            "price": "€40.99"
+        },
+        {
+            "image": "travel-hero",
+            "alt": "Travel Hero - adventures,journey help site",
+            "title": "Travel Hero",
+            "meta": "Adventure • Journey",
+            "price": "€29.99"
+        }
+    ],
+
+    "g_pricing_plan": "Pricing Plan",
+    "g_choose": "Choose The Perfect Plan for Creative Potential",
+    "button_subscribe": "Subscribe",
+    "plans": [
+        {
+            "title": "Standard Membership",
+            "price": "€14.99",
+            "duration": "/ Month",
+            "features": [
+                "Enhanced Resource Access",
+                "Monthly Credits",
+                "Priority Customer Support",
+                "Community Features Access"
+            ],
+            "bestseller": false
+        },
+        {
+            "title": "Plus Membership",
+            "price": "€29.99",
+            "duration": "/ Month",
+            "features": [
+                "All Standard Benefits",
+                "Increased Monthly Credits",
+                "Early Access to New Releases",
+                "Member-Only Offers"
+            ],
+            "bestseller": true,
+            "badge": "BEST SELLER"
+        },
+        {
+            "title": "Pro Membership",
+            "price": "€49.99",
+            "duration": "/ Month",
+            "features": [
+                "All Plus Benefits",
+                "Unlimited Downloads",
+                "Custom Licensing",
+                "Direct Creator Collaboration"
+            ],
+            "bestseller": false
+        }
+    ],
+
+    "g_faq": "F.A.Q",
+    "g_answer": "Answers to Your Questions",
+    "button_ask": "Ask Us A Question",
+    "faqItems": [
+        {
+            "question": "Can I request a refund?",
+            "answer": "Refund policies vary. Please check the specific terms associated with your purchase."
+        },
+        {
+            "question": "How do I access my purchased products?",
+            "answer": "Accessing your purchased products is seamless and hassle-free on our digital design assets marketplace. Simply log in to your account, navigate to the 'My Purchases' section, and you'll find all your purchased products ready for download.",
+            "open": true
+        },
+        {
+            "question": "Are there any discounts for bulk purchases?",
+            "answer": "Yes, we offer special discounts for bulk purchases. Contact our sales team for more information."
+        },
+        {
+            "question": "What payment methods do you accept here?",
+            "answer": "We accept credit cards, PayPal, and other popular payment methods."
+        },
+        {
+            "question": "Can I sell my digital products on this marketplace?",
+            "answer": "Yes, you can apply to become a seller. Check out the 'Sell With Us' page for details."
+        }
+    ],
+
+    "g_latest": "Latest Expert",
+    "g_explore": "Explore All Articles",
+    "blogPosts": [
+        {
+            "image": "binabox",
+            "alt": "Binabox website",
+            "title": "Creative Blog",
+            "date": "2024-04-15",
+            "dateDisplay": "15 April 2024"
+        },
+        {
+            "image": "dishes",
+            "alt": "Best dishes website",
+            "title": "Best Dishes",
+            "date": "2024-05-05",
+            "dateDisplay": "5 May 2024"
+        }
+    ]
+}

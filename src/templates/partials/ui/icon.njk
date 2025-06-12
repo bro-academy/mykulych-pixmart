@@ -1,0 +1,17 @@
+{% macro icon(type, modificator) %}
+<svg class="icon {{ modificator }}">
+    <use href="/src/assets/sprite.svg#{{ type }}"/>
+</svg>
+{% endmacro %}
+{# {% from 'src/templates/partials/ui/icon.njk' import icon %}
+{{ icon("icon-chevron-left") }} #}
+
+
+{% macro picture(class, src, alt) %}
+<picture>
+    <source srcset="/src/assets/images/{{ src }}.png?format=webp" type="image/webp" />
+    <img class="{{ class }}" src="/src/assets/images/{{ src }}.png" alt="{{ alt }}" loading="lazy" />
+</picture>
+{% endmacro %}
+{# {% from 'src/templates/partials/ui/icon.njk' import picture %}
+{{ picture("class", "src", "Alt") }} #}

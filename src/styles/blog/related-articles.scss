@@ -1,0 +1,95 @@
+@use '../ui/mixins' as *;
+@use '../ui/brakepoints' as *;
+
+.related-articles {
+    &__header {
+        display: flex;
+        flex-direction: column;
+        gap: 16px;
+        padding-top: 32px;
+
+        @include md {
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: center;
+            padding-top: 40px;
+        }
+    }
+
+    &__title {
+        @include heading-h2;
+    }
+
+    &__link {
+        @include link-l2;
+
+        color: var(--accent-link);
+
+        &::after {
+            content: '';
+            width: 16px;
+            height: 16px;
+            display: block;
+            flex-shrink: 0;
+            background-image: url('/src/assets/images/chevron-right.svg');
+        }
+    }
+
+    &__list {
+        padding-top: 32px;
+        padding-bottom: 32px;
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 24px;
+
+        @include md {
+            grid-template-columns: repeat(2, 1fr);
+            padding-bottom: 40px;
+        }
+
+        @include lg {
+            grid-template-rows: 1fr;
+            grid-template-columns: repeat(3, 1fr);
+        }
+    }
+}
+
+.article-card {
+    background-color: var(--bg-base);
+    box-shadow: 0 4px 30px 0 rgb(29 57 95 / 0.05);
+    padding: 20px;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+    cursor: pointer;
+
+    &--big {
+        @include md {
+            grid-row: 2/ 3;
+            grid-column: 1/ 3;
+        }
+
+        @include lg {
+            grid-row: auto;
+            grid-column: auto;
+        }
+    }
+
+    &__illustration {
+        position: relative;
+    }
+
+    &__image {
+        width: 100%;
+        border-radius: 20px;
+        height: 272px;
+        object-fit: cover;
+    }
+
+    &__tag {
+        position: absolute;
+        left: 16px;
+        bottom: -20px;
+    }
+}

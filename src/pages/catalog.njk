@@ -1,0 +1,22 @@
+{% extends 'src/templates/layouts/base.njk' %}
+{% block content %}
+
+<div class="catalog-sections">
+    <section class="section section--catalog-banner">
+        <div class="section__wrapper">
+            <div class="section__content">
+                {% include 'src/templates/partials/catalog/catalog-banner.njk' %}
+            </div>
+        </div>
+    </section>
+
+    <section class="catalogs">
+        <div class="section__wrapper">
+            <div class="section__content">
+                {% include 'src/templates/partials/catalog/catalog.njk' %}
+            </div>
+        </div>
+    </section>
+</div>
+
+{% endblock %}

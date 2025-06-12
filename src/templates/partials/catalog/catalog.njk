@@ -1,0 +1,21 @@
+<div class="catalog">
+
+    <aside class="catalog__aside-filter">
+    {% include 'src/templates/partials/catalog/filter-desk.njk' %}
+    </aside>
+
+    <div class="catalog__content">
+        {% include 'src/templates/partials/catalog/catalog-header.njk' %}
+
+        <div class="catalog__products">
+            {% include 'src/templates/partials/catalog/catalog-products.njk' %}
+        </div>
+        <div class="catalog__load-button">
+            <button class="button button--secondary button--lg">Load more</button>
+        </div>
+
+    </div>
+    
+</div>
+
+

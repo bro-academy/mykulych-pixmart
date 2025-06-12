@@ -1,0 +1,74 @@
+@use '../ui/mixins' as *;
+@use '../ui/brakepoints' as *;
+
+.catalog__header {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+
+    &-top {
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        gap: 24px;
+
+        @include md {
+            flex-direction: row;
+        }
+    }
+
+    &-controls {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        justify-content: space-between;
+        width: 100%;
+
+        @include md {
+            justify-content: flex-start;
+        }
+    }
+
+    &-button {
+        width: 100%;
+        justify-content: space-between;
+
+        @include md {
+            width: 156px;
+        }
+    }
+
+    &-toggle {
+        @include lg {
+            @include hide-element;
+        }
+    }
+
+    &-sort {
+        display: flex;
+        align-items: center;
+        gap: 24px;
+        justify-content: space-between;
+        width: 100%;
+
+        @include md {
+            justify-content: flex-end;
+        }
+    }
+
+    &-view {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+    }
+
+    &-tags {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 8px;
+    }
+
+    &-tag {
+        @include link-l3;
+    }
+}

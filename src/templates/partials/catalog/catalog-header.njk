@@ -1,0 +1,45 @@
+<div class="catalog__header">
+    {% from 'src/templates/partials/ui/icon.njk' import icon %}
+
+    <div class="catalog__header-top">
+
+        <div class="catalog__header-controls">
+            <button class="catalog__header-button button button--secondary button--md">
+                Best Seller
+                {{ icon("icon-chevron-down") }}
+            </button>
+            <button class="catalog__header-toggle button button--primary button--icon-md">
+                {{ icon("icon-filter-lines", "icon--white") }}
+            </button>
+
+            {# Mobile Filter for up to lg brakepoint #}
+            {% include 'src/templates/partials/catalog/filter-opener.njk' %}
+            {# For desktop - simple aside block with filter #}
+        </div>
+
+        <div class="catalog__header-sort">
+            <span class="catalog__header-results">Showing 12 out of 120 results.</span>
+            <div class="catalog__header-view">
+                <button class="button button--primary button--icon-md">
+                    {{ icon("icon-grid", "icon--white") }}
+                </button>
+                <button class="button button--secondary button--icon-md">
+                    {{ icon("icon-list") }}
+                </button>
+            </div>
+        </div>
+
+    </div>
+
+    <div class="catalog__header-tags">
+        <button class="catalog__header-tag button button--secondary button--sm">
+            UI Kit
+            {{ icon("icon-x-close", "icon--16") }}
+        </button>
+        <button class="catalog__header-tag button button--secondary button--sm">
+            UI Kit
+            {{ icon("icon-x-close", "icon--16") }}
+        </button>
+    </div>
+
+</div>

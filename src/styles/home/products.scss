@@ -1,0 +1,61 @@
+@use '../ui/brakepoints' as *;
+@use '../ui/mixins' as *;
+
+.products {
+    grid-template-columns: repeat(5, 1fr);
+    min-height: 272px;
+    display: grid;
+    gap: 16px;
+
+    @include hide-scrollbar;
+
+    @include lg {
+        gap: 32px;
+    }
+
+    &__card {
+        flex-direction: column;
+        justify-content: space-between;
+        height: 100%;
+        width: 100%;
+        min-width: 224px;
+        display: flex;
+        align-items: center;
+        cursor: pointer;
+
+        @include md {
+            min-width: auto;
+        }
+    }
+
+    &__illustration {
+        color: var(--marina-800);
+        background-color: var(--bg-alternative2);
+        padding: 37px;
+        border-radius: 20px;
+        transition:
+            color var(--tran-duration),
+            background-color var(--tran-duration);
+
+        @include md {
+            padding: 37px 13px;
+        }
+
+        @include lg {
+            padding: 37px;
+        }
+
+        &:hover {
+            background-color: #0265dc;
+            color: var(--surface-marina);
+        }
+
+        & svg {
+            width: 100%;
+        }
+    }
+
+    &__text {
+        @include subheader-s5;
+    }
+}

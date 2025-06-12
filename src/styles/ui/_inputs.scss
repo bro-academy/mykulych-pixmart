@@ -1,0 +1,351 @@
+@use '../ui/mixins' as *;
+@use '../ui/brakepoints' as *;
+
+// ===================== Switcher =====================
+.switcher {
+    cursor: pointer;
+    text-indent: -9999px;
+    width: 40px;
+    height: 20px;
+    background: var(--color-disabled);
+    display: block;
+    border-radius: 10px;
+    position: relative;
+    appearance: none;
+    pointer-events: auto;
+
+    &:hover {
+        background-color: var(--line);
+    }
+
+    &:focus {
+        outline: 2px solid var(--marina-600);
+        outline-offset: 2px;
+    }
+
+    &::after {
+        content: '';
+        position: absolute;
+        top: 2px;
+        left: 2px;
+        width: 16px;
+        height: 16px;
+        background: #ffffffff;
+        border-radius: 50%;
+        transition: 0.3s;
+    }
+
+    &:active {
+        background-color: var(--color-secondary);
+        outline: none;
+
+        &::after {
+            background-color: var(--bg-alternative2-invert);
+        }
+    }
+
+    &:checked {
+        background-color: var(--marina-800);
+
+        &:hover {
+            background-color: var(--marina-600);
+        }
+
+        &:focus {
+            outline: 2px solid var(--marina-600);
+            outline-offset: 2px;
+        }
+
+        &::after {
+            left: calc(100% - 2px);
+            transform: translateX(-100%);
+        }
+
+        &:active {
+            background-color: var(--marina-600);
+
+            &::after {
+                background-color: var(--fixed-base-white);
+            }
+        }
+    }
+}
+
+// ===================== Radio =====================
+.custom-radio {
+    display: inline-block;
+    width: 14px;
+    height: 14px;
+    border-radius: 7px;
+    background-color: var(--bg-base);
+    border: 2px solid var(--line);
+    cursor: pointer;
+    transition: background-color 0.2s ease-in-out;
+    position: relative;
+}
+
+.default-radio {
+    width: 0;
+    height: 0;
+    position: absolute;
+
+    &:hover {
+        & + .custom-radio {
+            background-color: var(--bg-alternative2);
+        }
+    }
+
+    &:active {
+        & + .custom-radio {
+            border: 5px solid var(--marina-800);
+        }
+    }
+
+    &:focus {
+        & + .custom-radio {
+            border: 2px solid var(--color-secondary2);
+            outline: 2px solid var(--marina-600);
+            outline-offset: 1px;
+        }
+    }
+
+    // ---- when checked ----
+    &:checked {
+        & + .custom-radio {
+            border: 5px solid var(--line);
+        }
+
+        &:active {
+            & + .custom-radio {
+                border: 5px solid var(--marina-800);
+            }
+        }
+
+        &:focus {
+            & + .custom-radio {
+                border: 5px solid var(--marina-600);
+            }
+        }
+    }
+
+    // ---------------------
+}
+
+// ===================== Checkbox =====================
+.form__options-option {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+// ------------------------
+
+.custom-checkbox {
+    display: inline-block;
+    width: 14px;
+    height: 14px;
+    border-radius: 4px;
+    background-color: var(--bg-base);
+    border: 1px solid var(--line);
+    cursor: pointer;
+    transition: background-color 0.2s ease-in-out;
+    position: relative;
+}
+
+.default-checkbox {
+    width: 0;
+    height: 0;
+    position: absolute;
+
+    &:hover {
+        & + .custom-checkbox {
+            background-color: var(--bg-alternative2);
+        }
+    }
+
+    &:active {
+        & + .custom-checkbox {
+            background-color: var(--marina-200);
+            border-color: var(--marina-200);
+        }
+    }
+
+    &:focus {
+        & + .custom-checkbox {
+            border-color: transparent;
+            background-color: var(--bg-alternative);
+            outline: 2px solid var(--marina-600);
+        }
+    }
+
+    // ---- when checked -----
+    &:checked {
+        & + .custom-checkbox {
+            background-image: url('/src/assets/images/mark-white.svg');
+            background-size: 8px auto;
+            background-size: contain;
+            background-repeat: no-repeat;
+            background-position: center;
+            background-color: var(--marina-800);
+            border: 2px solid var(--marina-800);
+        }
+
+        &:hover {
+            & + .custom-checkbox {
+                background-color: var(--marina-600);
+                border: 2px solid var(--marina-600);
+            }
+        }
+
+        &:active {
+            & + .custom-checkbox {
+                background-image: url('/src/assets/images/mark-blue.svg');
+                background-color: var(--marina-200);
+                border: 2px solid var(--marina-200);
+            }
+        }
+    }
+}
+
+//  ============ Form Fields  ============
+.form-field {
+    border: 1px solid var(--seporator-bold);
+    padding: 20px;
+    border-radius: 8px;
+    width: 100%;
+    transition:
+        border-color var(--tran-duration),
+        outline var(--tran-duration);
+
+    @include text-p2-regular;
+
+    &.error {
+        border-color: var(--status-negative);
+    }
+
+    &.success {
+        border-color: var(--status-positive);
+    }
+
+    &--header {
+        padding: 9px 12px;
+    }
+
+    &::placeholder {
+        color: var(--fixed-secondary2);
+
+        @include text-p2-regular;
+    }
+
+    &--textarea {
+        resize: none;
+        min-height: 180px;
+
+        &::placeholder {
+            color: var(--color-primary);
+        }
+    }
+
+    &:hover {
+        border-color: var(--marina-600);
+        outline: 1px solid var(--marina-600);
+    }
+
+    &:focus-visible {
+        outline: 2px solid var(--marina-600);
+        border-color: var(--marina-600);
+    }
+}
+
+.form__error-message {
+    @include text-p4-regular;
+
+    &.error {
+        color: var(--status-negative);
+    }
+
+    &.success {
+        color: var(--status-positive);
+    }
+}
+
+// -------- styles to hide empty Label --------
+.visually-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border: 0;
+}
+
+// ============= Input Range  ============
+.range-slider {
+    position: relative;
+    width: 100%;
+    height: 6px;
+
+    &__track {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        width: 100%;
+        height: 6px;
+        background: var(--seporator-bold);
+        border-radius: 5px;
+    }
+
+    &__range {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        height: 6px;
+        background: var(--marina-800);
+        border-radius: 5px;
+        z-index: 1;
+    }
+
+    input[type='range'] {
+        position: absolute;
+        width: 100%;
+        height: 6px;
+        appearance: none;
+        background: none;
+        pointer-events: none;
+
+        &::-webkit-slider-thumb {
+            appearance: none;
+            height: 20px;
+            width: 20px;
+            border-radius: 50%;
+            background: var(--marina-800);
+            cursor: pointer;
+            pointer-events: all;
+            position: relative;
+            z-index: 2;
+            border: none;
+        }
+
+        &::-moz-range-thumb {
+            height: 20px;
+            width: 20px;
+            border-radius: 50%;
+            background: #007bff;
+            cursor: pointer;
+            pointer-events: all;
+            border: none;
+        }
+    }
+}
+
+.range-values {
+    display: flex;
+    justify-content: space-between;
+
+    &-price {
+        @include text-p2-regular;
+    }
+}

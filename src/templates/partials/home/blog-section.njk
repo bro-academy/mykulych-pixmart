@@ -1,0 +1,25 @@
+<div class="blog-section">
+
+    <div class="blog-section__header">
+        <h2 class="blog-section__heading heading-h2">{{ g_latest }}</h2>
+        <a href="#" class="blog-section__link link">
+            {{ g_explore }}
+        </a>
+    </div>
+
+    <div class="blog-section__container">
+    {% from 'src/templates/partials/ui/icon.njk' import picture %}
+
+    {% for post in blogPosts %}
+        <div class="blog-section__item">
+            {{ picture("blog-section__image", post.image, post.alt) }}
+            <div class="blog-section__text">
+                <h3 class="blog-section__title">{{ post.title }}</h3>
+                <p class="blog-section__date" datetime="{{ post.date }}">{{ post.dateDisplay }}</p>
+            </div>
+        </div>
+    {% endfor %}
+    </div>
+
+
+</div>

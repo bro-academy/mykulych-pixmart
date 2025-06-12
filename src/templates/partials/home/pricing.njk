@@ -1,0 +1,42 @@
+<div class="pricing">
+
+    <div class="pricing__heading">
+        <span class="pricing__tag">{{ g_pricing_plan }}</span>
+        <h2 class="pricing__title heading-h2">{{ g_choose }}</h2>
+    </div>
+
+    <div class="pricing__cards">
+    {% for plan in plans %}
+
+        <div class="pricing__card{% if plan.bestseller %} pricing__card--bestseller{% endif %}">
+            
+            {% if plan.badge %}
+                <span class="pricing__badge">{{ plan.badge }}</span>
+            {% endif %}
+
+            <div class="pricing__offer">
+                <p class="pricing__offer-title">{{ plan.title }}</p>
+                <p class="pricing__offer-price">
+                    {{ plan.price }}
+                    <span class="pricing__offer-duration">{{ plan.duration }}</span>
+                </p>
+            </div>
+
+            <div class="pricing__features">
+                <ul class="pricing__plate">
+                    {% for feature in plan.features %}
+                        <li class="pricing__plate-item">{{ feature }}</li>
+                    {% endfor %}
+                </ul>
+
+                <button class="pricing__button button{% if plan.bestseller %} pricing__button--bestseller button--primary{% else %} button--secondary{% endif %} button--lg">
+                    {{ button_subscribe }}
+                </button>
+            </div>
+        </div>
+
+    {% endfor %}
+    </div>
+
+
+</div>
