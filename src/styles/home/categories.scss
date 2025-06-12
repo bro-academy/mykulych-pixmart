@@ -1,5 +1,5 @@
 @use '../ui/brakepoints' as *;
-@use '../mixins' as *;
+@use '../ui/mixins' as *;
 
 .categories {
     --column-width: calc(50% - (var(--column-gap) / 2));

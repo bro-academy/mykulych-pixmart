@@ -1,7 +1,7 @@
 // ======= Global ============
 @use "ui/normalize";
-@use "global-styles";
-@use "mixins";
+@use "global/global-styles";
+@use "ui/mixins";
 @use "ui/brakepoints";
 @use "ui/button";
 @use "ui/inputs";
@@ -9,7 +9,7 @@
 @use "ui/labels";
 
 // ======= Main Sections =====
-@use "sections";
+@use "global/sections";
 
 // ======= Header ============
 @use "header/header";
