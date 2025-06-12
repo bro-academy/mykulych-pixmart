@@ -18,6 +18,11 @@
         align-items: center;
     }
 
+    &__illustration {
+        width: 60px;
+        height: 60px;
+    }
+
     &__info {
         &-name {
             @include heading-h5;
