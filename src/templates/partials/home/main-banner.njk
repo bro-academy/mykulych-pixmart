@@ -1,21 +1,11 @@
 <div class="main-banner">
 
     <div class="main-banner__images">
-        <img
-            class="main-banner__img main-banner__img--third"
-            src="/src/assets/images/main-banner-3.png"
-            alt="Join our upcoming event"
-        >
-        <img
-            class="main-banner__img main-banner__img--second"
-            src="/src/assets/images/main-banner-2.png"
-            alt="Join our upcoming event2"
-        >
-        <img
-            class="main-banner__img main-banner__img--first"
-            src="/src/assets/images/main-banner-1.png"
-            alt="Join our upcoming event3"
-        >
+
+        {% from 'src/templates/partials/ui/icon.njk' import picture %}
+        {{ picture("main-banner__img main-banner__img--third", "main-banner-3", "Join our upcoming event") }}
+        {{ picture("main-banner__img main-banner__img--second", "main-banner-2", "Join our upcoming event") }}
+        {{ picture("main-banner__img main-banner__img--first", "main-banner-1", "Join our upcoming event") }}
 
         <div class="main-banner__img main-banner__img-icon main-banner__img--fourth">
             <img src="/src/assets/images/pen.svg" alt="Icon pen">

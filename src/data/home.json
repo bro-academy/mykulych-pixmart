@@ -43,33 +43,38 @@
     "g_go": "Go to product",
     "items": [
         {
-            "image": "/src/assets/images/travel-hero.png",
+            "image": "travel-hero",
+            "alt": "Travel Hero - adventures,journey help site",
             "title": "Travel Hero",
             "meta": "Adventure • Journey",
             "price": "€29.99",
             "badge": "/src/assets/images/label-badge.svg"
         },
         {
-            "image": "/src/assets/images/real-estate.png",
+            "image": "real-estate",
+            "alt": "Healthcare help website",
             "title": "Healthcare Pro",
             "meta": "Medical • Wellness",
             "price": "€15.99",
             "badge": "/src/assets/images/label-badge.svg"
         },
         {
-            "image": "/src/assets/images/foodish-delight.png",
+            "image": "foodish-delight",
+            "alt": "Food catering service",
             "title": "Foodish Delight",
             "meta": "Catering • Food",
             "price": "€31.99"
         },
         {
-            "image": "/src/assets/images/real-estate.png",
+            "image": "real-estate",
+            "alt": "Modern home design guides",
             "title": "Real Estate",
             "meta": "Modern • Homes",
             "price": "€40.99"
         },
         {
-            "image": "/src/assets/images/travel-hero.png",
+            "image": "travel-hero",
+            "alt": "Travel Hero - adventures,journey help site",
             "title": "Travel Hero",
             "meta": "Adventure • Journey",
             "price": "€29.99"

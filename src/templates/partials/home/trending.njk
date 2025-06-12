@@ -23,7 +23,8 @@
 
         <div class="card">
             <div class="card__illustration">
-                <img class="card__illustration-img" src="{{ item.image }}" alt="{{ item.title }}">
+                {% from 'src/templates/partials/ui/icon.njk' import picture %}
+                {{ picture("card__illustration-img", item.image, item.alt) }}
                 {% if item.badge %}
                 <div class="card__badge">
                     <img src="{{ item.badge }}" alt="Badge label">
